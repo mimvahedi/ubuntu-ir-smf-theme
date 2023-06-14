@@ -1,0 +1,4013 @@
+/**
+ * Layout for ubuntu-portal theme
+ *
+ * @author Simple Machines
+ * @author Vadim Nevorotin <malamut@ubuntu.ru>
+ */
+
+.smf {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+/* Normal, standard links. */
+.smf a:link,
+.smf a:visited
+{
+	color: #DD4814;
+	text-decoration: underline;
+	/*color: #dd4814;
+	text-decoration: none;*/
+}
+.smf a:hover
+{
+	text-decoration: underline;
+	cursor: pointer;
+	color: #dd4814;
+}
+
+/* Links that open in a new window. */
+.smf a.new_win:link,
+.smf a.new_win:visited
+{
+	text-decoration: underline;
+}
+.smf a.new_win:hover
+{
+	text-decoration: underline;
+}
+
+.smf ul {
+	margin: 1em 0;
+	padding-left: 32px;
+}
+
+/* Tables should show empty cells. */
+.smf table
+{
+	empty-cells: show;
+}
+
+/* Help popups require a different styling of the body element. */
+body#help_popup
+{
+	padding: 1em;
+}
+
+/* use dark grey for the text, leaving #000 for headers etc */
+body,
+.smf td,
+.smf th,
+.smf tr
+{
+	color: #000;
+	/*line-height: 130%;*/
+}
+
+/* This division wraps the entire forum when a forum width is set. */
+.smf div#wrapper
+{
+	margin: 0 auto;
+}
+
+/* lets give all forms zero padding/margins */
+.smf form
+{
+	padding: 0;
+	margin: 0;
+}
+
+/* We can style the different types of input buttons to be uniform thoughout different browsers and their color themes.
+	.button_submit - covers input[type=submit], input[type=button], button[type=submit] and button[type=button] in all browsers
+	.button_reset  - covers input[type=reset] and button[type=reset] thoughout all browsers
+	.input_check	- covers input[type=checkbox] thoughout all browsers
+	.input_radio	- covers input[type=radio] thoughout all browsers
+	.input_text	 - covers input[type=text] thoughout all browsers
+	.input_file	 - covers input[type=file] thoughout all browsers
+*/
+
+.smf input,
+.smf button,
+.smf select,
+.smf textarea
+{
+	font: 95%/115%;
+	color: #000;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 2px;
+}
+
+/* Select elements look horrible with the extra padding, so leave them unpadded. */
+.smf select
+{
+	padding: 0;
+}
+
+/* Add some padding to the options instead. */
+.smf select option
+{
+	padding: 1px;
+}
+
+/* The font size of textareas should be just a little bit larger. */
+.smf textarea
+{
+	font: 100%/130%;
+}
+
+/* Buttons should be styled a bit differently, in order to make them look more button'ish. */
+.smf .button_submit,
+.smf .button_reset
+{
+	background: #E6E6E6 url(../images/theme/submit_bg.png) no-repeat;
+	border: 1px solid #aaa;
+	cursor: pointer;
+	font-weight: normal;
+}
+.smf input:hover,
+.smf textarea:hover,
+.smf button:hover,
+.smf select:hover
+{
+	border: 1px solid #454545;
+}
+.smf .button_submit:hover,
+.smf .button_reset:hover
+{
+	border: 1px solid #aaa;
+	background: url(../images/theme/submit_bg.png) no-repeat 0 -218px #ECECEC;
+}
+.smf input:focus,
+.smf textarea:focus,
+.smf button:focus,
+.smf select:focus
+{
+	border: 1px solid #454545;
+}
+
+/* All input elements that are checkboxes or radio buttons shouldn't have a border around them. */
+.smf input.input_check,
+.smf input.input_radio
+{
+	border: none;
+	background: none;
+}
+.smf h3.catbg input.input_check
+{
+	margin: 9px 7px 0 7px;
+}
+
+/* Give disabled text input elements a different background color. */
+.smf input[disabled].input_text
+{
+	background-color: #eee;
+}
+
+/* Standard horizontal rule.. ([hr], etc.) */
+.smf hr,
+.smf .hrcolor
+{
+	height: 1px;
+	border: 0;
+	color: #666;
+	background-color: #666;
+	margin: 12px;
+}
+
+/* By default set the color on these tags as #000. */
+.smf h1,
+.smf h2,
+.smf h3,
+.smf h4,
+.smf h5,
+.smf h6
+{
+	color: #333;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+/* Fieldsets are used to group elements. */
+.smf fieldset
+{
+	border: 1px solid #dfdcd9;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding: 8px;
+	margin: 0 0 0.3em 0;
+}
+/* No image should have a border when linked. */
+.smf a img
+{
+	border: 0;
+	max-width: 100%;
+}
+/* Define strong as bold, and em as italics */
+.smf strong
+{
+	font-weight: bold;
+}
+
+.smf em
+{
+	font-style: italic;
+}
+/* Alternative for u tag */
+.smf .underline
+{
+	text-decoration: underline;
+}
+
+/* Common classes to easy styling.
+------------------------------------------------------- */
+
+.smf .floatright,
+.smf .align_right
+{
+	float: right;
+}
+.smf .floatleft,
+.smf .align_left
+{
+	float: left;
+}
+
+.smf .flow_auto
+{
+	overflow: auto;
+}
+.smf .flow_hidden
+{
+	overflow: hidden;
+}
+.smf .clear
+{
+	clear: both;
+}
+.smf .clear_left
+{
+	clear: left;
+}
+.smf .clear_right
+{
+	clear: right;
+}
+
+/* Default font sizes: small (8pt), normal (10pt), and large (14pt). */
+.smf .smalltext,
+.smf tr.smalltext th {
+	font-size: 11px;
+	line-height: 15px;
+}
+
+.smf .modified {
+	font-size: 9px;
+}
+
+.smf .middletext {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.smf .normaltext {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.smf .largetext {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.smf .centertext
+{
+	margin: 0 auto;
+	text-align: center;
+}
+.smf .righttext
+{
+	margin-left: auto;
+	margin-right: 0;
+	text-align: right;
+}
+.smf .lefttext
+{
+	margin-left: 0;
+	margin-right: auto;
+	text-align: left;
+}
+.smf .double_height
+{
+	line-height: 2em;
+}
+/* some common padding styles */
+.smf .padding
+{
+	padding: 0.7em;
+}
+.smf .main_section,
+.smf .lower_padding
+{
+	padding-bottom: 0.5em;
+}
+/* a quick reset list class. */
+.smf ul.reset,
+.smf ul.reset li
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+/* Some BBC related styles.
+------------------------------------------------------- */
+
+/* A quote, perhaps from another post. */
+.smf .quoteheader, .smf .quoteheader a:link, .smf .quoteheader a:visited
+{
+	color: #000;
+}
+
+.smf .codeheader,
+.smf .quoteheader
+{
+	margin: 10px 0 3px 0;
+	font-size: 0.9em;
+	font-weight: bold;
+	padding-left: 5px;
+}
+.smf blockquote .quoteheader,
+.smf blockquote .quoteheader a:link,
+.smf blockquote .quoteheader a:visited,
+.smf blockquote .codeheader,
+.smf blockquote .codeoperation,
+.smf blockquote blockquote blockquote .quoteheader,
+.smf blockquote blockquote blockquote .quoteheader a:link,
+.smf blockquote blockquote blockquote .quoteheader a:visited,
+.smf blockquote blockquote blockquote .codeheader,
+.smf blockquote blockquote blockquote .codeoperation
+{
+	color: white;
+}
+
+.smf blockquote code,
+.smf blockquote blockquote blockquote code
+{
+	color: black;
+}
+
+.smf blockquote,
+.smf blockquote blockquote blockquote
+{
+	background: #762C54 url(../images/theme/quote-grey-tiny2.png) no-repeat 5px 5px;
+	font-size: 0.9em;
+	color: white;
+	line-height: 1.4em;
+	padding: 1em 1em 1em 2em;
+	margin-bottom: 10px;
+	border-radius: 3px;
+}
+.smf blockquote blockquote,
+.smf blockquote blockquote blockquote blockquote
+{
+	background: #e3e3e3;
+	color: black;
+}
+
+.smf blockquote blockquote .quoteheader,
+.smf blockquote blockquote .quoteheader a:link,
+.smf blockquote blockquote .quoteheader a:visited,
+.smf blockquote blockquote .codeheader,
+.smf blockquote blockquote .codeoperation
+{
+	color: black;
+}
+
+/* A code block - maybe even PHP ;). */
+.smf code
+{
+	display: block;
+	font-family: "dejavu sans mono", "monaco", "lucida console", "courier new", monospace;
+	font-size: x-small;
+	background: #eee;
+	border: 1px solid #000;
+	line-height: 1.3em;
+	padding: 3px 1em;
+	overflow: auto;
+	white-space: pre;
+	/* Stop after about 24 lines, and just show a scrollbar. */
+	max-height: 24em;
+	border-radius: 3px;
+}
+
+/* For links to change the code stuff... */
+.smf .codeoperation
+{
+	font-weight: normal;
+}
+
+/* Styling for BBC tags */
+.smf .bbc_size
+{
+	line-height: 1.4em;
+}
+.smf .bbc_color a
+{
+	color: inherit;
+}
+.smf .bbc_img
+{
+	border: 0;
+	max-width: 100%;
+}
+.smf .bbc_table
+{
+	font: inherit;
+	color: inherit;
+}
+.smf .bbc_table td
+{
+	font: inherit;
+	color: inherit;
+	vertical-align: top;
+}
+.smf .bbc_u
+{
+	text-decoration: underline;
+}
+.smf .bbc_list
+{
+	text-align: left;
+}
+.smf .bbc_tt
+{
+	font-family: "dejavu sans mono", "monaco", "lucida console", "courier new", monospace;
+}
+
+
+/* Generally, those [?] icons.  This makes your cursor a help icon. */
+.smf .help
+{
+	cursor: help;
+}
+
+/* /me uses this a lot. (emote, try typing /me in a post.) */
+.smf .meaction
+{
+	color: red;
+}
+
+/* The main post box - this makes it as wide as possible. */
+.smf .editor
+{
+	width: 96%;
+}
+
+/* Highlighted text - such as search results. */
+.smf .highlight
+{
+	background-color: #ff0;
+	font-weight: bold;
+	color: #000 !important;
+}
+
+/* A more discreet highlight color, for selected membergroups etc. */
+.smf .highlight2
+{
+	background-color: #b3f4b0;
+	color: #000 !important;
+}
+/* Generic, mostly color-related, classes.
+------------------------------------------------------- */
+
+.smf .titlebg,
+.smf .titlebg2,
+.smf tr.titlebg th,
+.smf tr.titlebg td,
+.smf tr.titlebg2 td
+{
+	color: #333;
+	font-size: 14px;
+	font-weight: normal;
+	background: url(../images/theme/main_block.png) no-repeat -10px -200px;
+}
+.smf .catbg,
+.smf .catbg2,
+.smf tr.catbg td,
+.smf tr.catbg2 td,
+.smf tr.catbg th,
+.smf tr.catbg2 th
+{
+	color: #fff;
+	font-size: 14px;
+	font-weight: normal;
+	background: url(../images/theme/main_block.png) no-repeat -10px -160px;
+}
+
+/* adjust the table versions of headers */
+.smf tr.titlebg th,
+.smf tr.titlebg2 th,
+.smf td.titlebg,
+.smf td.titlebg2,
+.smf tr.catbg th,
+.smf tr.catbg2 th,
+.smf td.catbg,
+.smf td.catbg2
+{
+	padding: 0 6px;
+}
+.smf tr.titlebg th,
+.smf tr.titlebg2 th,
+.smf td.titlebg,
+.smf td.titlebg2
+{
+	color: #333;
+}
+.smf tr.titlebg th a:link,
+.smf tr.titlebg th a:visited,
+.smf tr.titlebg2 td a:link,
+.smf tr.titlebg2 td a:visited
+{
+	color: #333;
+}
+.smf tr.catbg th a:link,
+.smf tr.catbg th a:visited,
+.smf tr.catbg2 td a:link,
+.smf tr.catbg2 td a:visited
+{
+	text-decoration: none;
+	color: #fff;
+}.smf tr.catbg th a:hover,
+.smf tr.catbg2 td a:hover {
+	text-decoration: underline;
+}
+
+.smf .catbg select
+{
+	height: 1.5em;
+	font-size: 0.85em;
+}
+
+/* Alternating backgrounds for posts, and several other sections of the forum. */
+.smf .windowbg,
+.smf #preview_body
+{
+	color: #000;
+	background-color: #e8e8e8;
+}
+.smf .windowbg2
+{
+	color: #000;
+	background-color: #f7f7f7;
+}
+.smf .windowbg3
+{
+	color: #000;
+	background-color: #f2f2f2;
+}
+
+/* the page navigation area */
+.smf .pagesection
+{
+	font-size: 0.9em;
+	padding: 0.2em;
+	overflow: hidden;
+	margin-bottom: 1px;
+}
+.smf div.pagesection div.floatright input
+{
+	margin-top: 3px;
+}
+
+.smf .pagelinks
+{
+	padding: 0.6em 0 0.4em 0;
+}
+
+/* Colors for background of posts requiring approval */
+.smf .approvebg
+{
+	color: #000;
+	background-color: #ffeaea;
+}
+.smf .approvebg2
+{
+	color: #000;
+	background-color: #fff2f2;
+}
+
+/* Color for background of *topics* requiring approval */
+.smf .approvetbg
+{
+	color: #000;
+	background-color: #e4a17c;
+}
+.smf .approvetbg2
+{
+	color: #000;
+	background-color: #f3bd9f;
+}
+
+/* Sticky topics get a different background */
+.smf .stickybg
+{
+	background: #e1e1e1;
+}
+.smf .stickybg2
+{
+	background: #e8e8e8;
+}
+
+/* Locked posts get a different shade, too! */
+.smf .lockedbg
+{
+	/*background: #d4dce2;*/
+	background: #e8e8e8;
+	font-style: italic;
+}
+.smf .lockedbg2
+{
+	/*background: #d8e1e7;*/
+	background: #f7f7f7;
+	font-style: italic;
+}
+
+.smf .locked_sticky,
+.smf .locked_sticky2 {
+	font-style: italic;
+}
+
+/* Posts and personal messages displayed throughout the forum. */
+.smf .post,
+.smf .personalmessage
+{
+	overflow: auto;
+	line-height: 1.4em;
+	padding: 0.1em 0;
+}
+
+/* All the signatures used in the forum.  If your forum users use Mozilla, Opera, or Safari, you might add max-height here ;). */
+.smf .signature,
+.smf .attachments
+{
+	width: 98%;
+	overflow: auto;
+	clear: right;
+	padding: 1em 0 3px 0;
+	border-top: 1px solid #aaa;
+	line-height: 1.4em;
+	font-size: 0.85em;
+}
+.smf .custom_fields_above_signature
+{
+	width: 98%;
+	clear: right;
+	padding: 1em 0 3px 0;
+	border-top: 1px solid #aaa;
+	line-height: 1.4em;
+	font-size: 0.85em;
+}
+
+/* Sometimes there will be an error when you post */
+.smf .error
+{
+	color: red;
+}
+
+/* Messages that somehow need to attract the attention. */
+.smf .alert
+{
+	color: red;
+}
+
+/* Calendar colors for birthdays, events and holidays */
+.smf .birthday
+{
+	color: #920ac4;
+}
+
+.smf .calendar_today .birthday {
+	color: #fff;
+}
+
+.smf .event
+{
+	color: #078907;
+}
+
+.smf .holiday
+{
+	color: #000080;
+}
+
+/* Colors for warnings */
+.smf .warn_mute
+{
+	color: red;
+}
+
+.smf .warn_moderate
+{
+	color: #ffa500;
+}
+
+.smf .warn_watch,
+.smf .success
+{
+	color: green;
+}
+
+.smf a.moderation_link,
+.smf a.moderation_link:visited
+{
+	color: red;
+	font-weight: bold;
+}
+
+.smf .openid_login
+{
+	background: white url(../images/openid.gif) no-repeat;
+	padding-left: 18px;
+}
+
+/* a descriptive style */
+.smf .description,
+.smf .description_board,
+.smf .plainbox
+{
+	padding: 8px;
+	font-size: 14px;
+	line-height: 18px;
+	border: solid 1px #ccc;
+	background: #EAEAEA;
+	color: #454545;
+	margin: 0.2em 1px 1em 1px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.smf .description_board
+{
+	margin: 2px 1px 0 1px;
+}
+
+/* an informative style */
+.smf .information
+{
+	padding: 0.5em 1em;
+	font-size: 14px;
+	line-height: 18px;
+	border: 1px solid #bbb;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #f0f6f0;
+	margin: 0.2em 1px 1em 1px;
+}
+.smf .information p
+{
+	padding: 1em;
+	margin: 0;
+}
+.smf p.para2
+{
+	padding: 1em 0 3.5em 0;
+	margin: 0;
+}
+/* AJAX notification bar
+------------------------------------------------------- */
+#ajax_in_progress
+{
+	background: url(../images/theme/loadingbar.png) repeat-x;
+	color: #f96f00;
+	text-align: center;
+	font-size: 16pt;
+	padding: 8px;
+	width: 100%;
+	height: 66px;
+	line-height: 25px;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#ajax_in_progress a
+{
+	color: orange;
+	text-decoration: underline;
+	font-size: smaller;
+	float: right;
+	margin-right: 20px;
+}
+
+/* Lists with settings use these a lot.
+------------------------------------------------------- */
+.smf dl.settings
+{
+	clear: right;
+	overflow: auto;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+.smf dl.settings dt
+{
+	width: 48%;
+	float: left;
+	margin: 0 0 10px 0;
+	padding: 0;
+	clear: both;
+}
+.smf dl.settings dt.settings_title
+{
+	width: 100%;
+	float: none;
+	margin: 0 0 10px 0;
+	padding: 5px 0 0 0;
+	font-weight: bold;
+	clear: both;
+}
+.smf dl.settings dt.windowbg
+{
+	width: 98%;
+	float: left;
+	margin: 0 0 3px 0;
+	padding: 0 0 5px 0;
+	clear: both;
+}
+.smf dl.settings dd
+{
+	width: 48%;
+	float: left;
+	margin: 0 0 3px 0;
+	padding: 0;
+}
+.smf dl.settings img
+{
+	margin: 0 10px 0 0;
+}
+/* help icons */
+.smf dl.settings dt a img
+{
+	position: relative;
+	top: 2px;
+}
+
+/* Styles for rounded headers.
+------------------------------------------------------- */
+.smf h3.catbg,
+.smf h3.catbg2,
+.smf h3.titlebg,
+.smf h4.titlebg,
+.smf h4.catbg
+{
+	overflow: hidden;
+	height: 30px;
+	font-size: 16px;
+	line-height: 30px;
+}
+.smf h3.catbg a:link,
+.smf h3.catbg a:visited,
+.smf h4.catbg a:link,
+.smf h4.catbg a:visited,
+.smf h3.catbg,
+.smf .table_list tbody.header td,
+.smf .table_list tbody.header td a
+{
+	color: #fff;
+	text-decoration: none;
+}
+.smf h3.catbg2 a,
+.smf h3.catbg2
+{
+	color: #feb;
+}
+.smf h3.catbg a:hover,
+.smf h4.catbg a:hover,
+.smf .table_list tbody.header td a:hover
+{
+	text-decoration: underline;
+}
+.smf h3.catbg2 a:hover
+{
+	text-decoration: underline;
+}
+.smf h3.titlebg a,
+.smf h3.titlebg,
+.smf h4.titlebg,
+.smf h4.titlebg a
+{
+	color: #333;
+}
+.smf h3.titlebg a:hover,
+.smf h4.titlebg a:hover
+{
+	color: #ffa500;
+	text-decoration: none;
+}
+.smf h3.catbg img.icon,
+.smf h4.titlebg img.icon
+{
+	vertical-align: middle;
+	margin: -2px 5px 0 0;
+}
+.smf h4.catbg a.toggle img
+{
+	vertical-align: middle;
+	margin: -2px 5px 0 5px;
+}
+.smf h4.catbg,
+.smf h4.catbg2,
+.smf h3.catbg,
+.smf h3.catbg2,
+.smf .table_list tbody.header td.catbg
+{
+	background: url(../images/theme/main_block.png) no-repeat 100% -160px;
+	padding-right: 9px;
+}
+.smf h4.titlebg,
+.smf h3.titlebg
+{
+	background: url(../images/theme/main_block.png) no-repeat 100% -200px;
+	padding-right: 9px;
+}
+.smf h4.titlebg img.icon
+{
+	float: left;
+	margin: 5px 8px 0 0;
+}
+.smf div.cat_bar
+{
+	background: url(../images/theme/main_block.png) no-repeat 0 -160px;
+	padding-left: 9px;
+	height: 30px;
+	overflow: hidden;
+	margin-bottom: 2px;
+}
+.smf div.title_bar
+{
+	background: url(../images/theme/main_block.png) no-repeat 0 -200px;
+	padding-left: 9px;
+	height: 30px;
+	overflow: hidden;
+	margin-bottom: 1px;
+}
+
+/* rounded bars needs a different background here */
+
+.smf div.roundframe div.cat_bar
+{
+	background: url(../images/theme/main_block.png) no-repeat 0 -160px;
+}
+.smf div.roundframe div.cat_bar h3.catbg
+{
+	background: url(../images/theme/main_block.png) no-repeat 100% -160px;
+}
+.smf div.title_barIC
+{
+	background: url(../images/theme/main_block.png) no-repeat 0 -120px;
+	padding-left: 9px;
+	height: 30px;
+	overflow: hidden;
+	margin-bottom: 1px;
+}
+.smf div.title_barIC h4.titlebg
+{
+	background: url(../images/theme/main_block.png) no-repeat 100% -120px;
+}
+.smf #upshrinkHeaderIC p.pminfo
+{
+	margin: 0;
+	padding: 0.5em;
+}
+.smf img#upshrink_ic,
+.smf img#newsupshrink
+{
+	float: right;
+	margin: 10px 5px 0 0;
+}
+.smf table.table_list a.unreadlink,
+.smf table.table_list a.collapse
+{
+	float: right;
+}
+.smf table.table_list a.collapse
+{
+	margin: 9px 5px 0 1em;
+}
+
+/* The half-round header bars for some tables. */
+.smf .table_grid tr.catbg,
+.smf .table_grid tr.titlebg
+{
+	font-size: 0.95em;
+	border-bottom: 1px solid #DDDADA;
+}
+.smf .table_grid tr.catbg th,
+.smf .table_grid tr.titlebg th
+{
+	height: 30px;
+	line-height: 30px;
+}
+.smf tr.catbg th.first_th
+{
+	background: url(../images/theme/main_block.png) no-repeat 0 -160px;
+}
+.smf tr.catbg th.last_th
+{
+	background: url(../images/theme/main_block.png) no-repeat 100% -160px;
+}
+.smf tr.titlebg th.first_th
+{
+	background: url(../images/theme/main_block.png) no-repeat 0 -200px;
+}
+.smf tr.titlebg th.last_th
+{
+	background: url(../images/theme/main_block.png) no-repeat 100% -200px;
+}
+.smf .table_grid th.last_th input
+{
+	margin: 0 2px;
+}
+.smf .table_grid th.lefttext
+{
+	padding: 0 0.7em;
+}
+
+/* a general table class */
+.smf table.table_grid
+{
+	border-collapse: collapse;
+	margin-top: 0.1em;
+}
+.smf table.table_grid td
+{
+	padding: 3px;
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+
+/* GenericList */
+.smf .additional_row
+{
+	padding: 0.5em 0 0.5em 0;
+}
+.smf table.table_grid thead tr.catbg th
+{
+	white-space: nowrap;
+}
+
+/* table_grid styles for Profile > Show Permissions. */
+.smf #permissions table.table_grid  td
+{
+	padding: 0.4em 0.8em;
+	cursor: default;
+} 
+
+/* Common styles used to add corners to divisions.
+------------------------------------------------------- */
+.smf .windowbg span.topslice
+{
+	display: block;
+	background-color: #fff;
+	/*padding-left: 20px;
+	background: url(../images/theme/main_block.png) 0 -30px no-repeat;*/
+}
+.smf .windowbg span.topslice span
+{
+	display: block;
+	/*background: url(../images/theme/main_block.png) 100% -30px no-repeat;*/
+	height: 11px;
+	background-color: #e8e8e8;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	border-top-left-radius: 4px;
+}
+.smf .windowbg span.botslice
+{
+	display: block;
+	background-color: #fff;
+	/*padding-left: 20px;
+	background: url(../images/theme/main_block.png) 0 -40px no-repeat;*/
+	font-size: 5px;
+	line-height: 5px;
+	margin-bottom: 0.2em;
+}
+.smf .windowbg span.botslice span
+{
+	display: block;
+	/*background: url(../images/theme/main_block.png) 100% -40px no-repeat;*/
+	height: 11px;
+	background-color: #e8e8e8;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.smf .windowbg2 span.topslice
+{
+	display: block;
+	background-color: #fff;
+	/*padding-left: 20px;
+	background: url(../images/theme/main_block.png) 0 -60px no-repeat;*/
+}
+.smf .windowbg2 span.topslice span
+{
+	display: block;
+	/*background: url(../images/theme/main_block.png) 100% -60px no-repeat;*/
+	height: 11px;
+	background-color: #f7f7f7;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	border-top-left-radius: 4px;
+}
+.smf .windowbg2 span.botslice
+{
+	display: block;
+	background-color: #fff;
+	/*padding-left: 20px;
+	background: url(../images/theme/main_block.png) 0 -71px no-repeat;*/
+	font-size: 5px;
+	line-height: 5px;
+	margin-bottom: 0.2em;
+}
+.smf .windowbg2 span.botslice span
+{
+	display: block;
+	/*background: url(../images/theme/main_block.png) 100% -71px no-repeat;*/
+	height: 11px;
+	background-color: #f7f7f7;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-left-radius: 4px;
+}
+.smf .approvebg span.topslice
+{
+	display: block;
+	background-color: #fff;
+	/*padding-left: 20px;
+	background: url(../images/theme/main_block.png) 0 0 no-repeat;*/
+}
+.smf .approvebg span.topslice span
+{
+	display: block;
+	/*background: url(../images/theme/main_block.png) 100% 0 no-repeat;*/
+	height: 11px;
+	background-color: #ffeaea;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	border-top-left-radius: 4px;
+}
+.smf .approvebg span.botslice
+{
+	display: block;
+	background-color: #fff;
+	/*padding-left: 20px;
+	background: url(../images/theme/main_block.png) 0 -11px no-repeat;*/
+	margin-bottom: 0.2em;
+}
+.smf .approvebg span.botslice span
+{
+	display: block;
+	/*background: url(../images/theme/main_block.png) 100% -11px no-repeat;*/
+	height: 11px;
+	background-color: #ffeaea;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-left-radius: 4px;
+}
+.smf .postbg
+{
+	border-left: 1px solid #7f7f7f;
+	border-right: 1px solid #7f7f7f;
+}
+
+/* Used for sections that need somewhat larger corners.
+----------------------------------------------------------- */
+.smf .roundframe
+{
+	padding: 0 10px;
+	background: #f7f7f7;
+	border-left: 1px solid #dadada;
+	border-right: 1px solid #dadada;
+}
+
+.smf .roundframe dl,
+.smf .roundframe dt,
+.smf .roundframe p
+{
+	margin: 0;
+}
+.smf .roundframe p
+{
+	padding: 8px;
+}
+.smf span.upperframe,
+.smf span.lowerframe
+{
+	display: block;
+}
+.smf span.upperframe span,
+.smf span.lowerframe span
+{
+	height: 12px;
+	display: block;
+	background: #f7f7f7;
+	border-style: solid;
+	border-color: #dadada;
+}
+.smf span.upperframe span
+{
+	border-width: 1px 1px 0 1px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	border-top-left-radius: 4px;
+}
+.smf span.lowerframe span
+{
+	border-width: 0 1px 1px 1px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+/* The main content area.
+------------------------------------------------------- */
+.smf .content
+{
+	padding: 0.5em 1.2em;
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	background: transparent;
+	clear: none;
+	position: static;
+}
+.smf .content p
+{
+	margin: 0 0 0.5em 0;
+}
+
+/* Styles used by the auto suggest control.
+------------------------------------------------------- */
+.smf .auto_suggest_div
+{
+	border: 1px solid #000;
+	position: absolute;
+	visibility: hidden;
+}
+.smf .auto_suggest_item
+{
+	background-color: #ddd;
+}
+.smf .auto_suggest_item_hover
+{
+	background-color: #888;
+	cursor: pointer;
+	color: #eee;
+}
+
+/* Styles for the standard dropdown menus.
+------------------------------------------------------- */
+.smf #main_menu
+{
+	padding: 0 0.5em;
+	float: left;
+	margin: 0;
+	width: 98%;
+}
+
+.smf .dropmenu,
+.smf .dropmenu ul
+{
+	list-style: none;
+	line-height: 1em;
+	padding: 0;
+	margin: 0;
+}
+.smf .dropmenu
+{
+	padding: 0 0.5em;
+}
+.smf .dropmenu a
+{
+	display: block;
+	color: #000;
+	text-decoration: none;
+}
+.smf .dropmenu a span
+{
+	display: block;
+	padding: 0 0 0 5px;
+	font-size: 0.9em;
+}
+/* the background's first level only */
+.smf .dropmenu li a.firstlevel
+{
+	margin-right: 8px;
+}
+.smf .dropmenu li a.firstlevel span.firstlevel
+{
+	display: block;
+	position: relative;
+	left: -5px;
+	padding-left: 5px;
+	height: 22px;
+	line-height: 19px;
+}
+.smf .dropmenu li
+{
+	float: left;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.smf .dropmenu li ul
+{
+	z-index: 90;
+	display: none;
+	position: absolute;
+	width: 19.2em;
+	font-weight: normal;
+	border-bottom: 1px solid #b8b8b8;
+	background: url(../images/theme/menu_gfx.png) 0 -100px no-repeat;
+	padding: 7px 0 0 0;
+}
+.smf .dropmenu li li
+{
+	width: 19em;
+	margin: 0;
+	border-left: 1px solid #b8b8b8;
+	border-right: 1px solid #b8b8b8;
+}
+.smf .dropmenu li li a span
+{
+	display: block;
+	padding: 8px;
+}
+.smf .dropmenu li ul ul
+{
+	margin: -1.8em 0 0 13em;
+}
+
+/* the active button */
+.smf .dropmenu li a.active
+{
+	background: url(../images/theme/menu_gfx.png) no-repeat 100% 0;
+	color: #fff;
+}
+.smf .dropmenu li a.active span.firstlevel
+{
+	background: url(../images/theme/menu_gfx.png) no-repeat 0 0;
+}
+/* the hover effects */
+.smf .dropmenu li a.firstlevel:hover,
+.smf .dropmenu li:hover a.firstlevel
+{
+	background: url(../images/theme/menu_gfx.png) no-repeat 100% -30px;
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+}
+.smf .dropmenu li a.firstlevel:hover span.firstlevel,
+.smf .dropmenu li:hover a.firstlevel span.firstlevel
+{
+	background: url(../images/theme/menu_gfx.png) no-repeat 0 -30px;
+}
+/* the hover effects on level2 and 3 */
+.smf .dropmenu li li a:hover,
+.smf .dropmenu li li:hover>a
+{
+	background: url(../images/theme/main_block.png) no-repeat -10px -160px;
+	color: #000;
+	text-decoration: none;
+}
+.smf .dropmenu li:hover ul ul,
+.smf .dropmenu li:hover ul ul ul
+{
+	top: -999em;
+}
+.smf .dropmenu li li:hover ul
+{
+	top: auto;
+}
+.smf .dropmenu li:hover ul
+{
+	display: block;
+}
+.smf .dropmenu li li.additional_items
+{
+	background-color: #fff;
+}
+
+/* The dropdown menu toggle image */
+.smf #menu_toggle
+{
+	float: right;
+	margin-right: 10px;
+	padding-top: 3px;
+}
+.smf #menu_toggle span
+{
+	position: relative;
+	right: 5000px;
+}
+
+/* Styles for the standard button lists.
+------------------------------------------------------- */
+
+.smf .buttonlist ul
+{
+	z-index: 100;
+	padding: 5px 0;
+	margin: 0 0 5px 0;
+}
+.smf .buttonlist ul li
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+.smf .buttonlist ul li a
+{
+	display: block;
+	padding: 0 7px;
+	margin-left: 4px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 0.8em;
+	color: #000;
+	background-color: #dadada;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.smf .buttonlist ul li a:hover
+{
+	background-color: #fd9604;
+	color: #fff;
+}
+.smf .buttonlist ul li a.active
+{
+	background-color: #2c001e;
+	color: #eee;
+}
+.smf .buttonlist ul li a.active:hover
+{
+        background-color: #fd9604;
+}
+
+/* the navigation list */
+.smf ul#navigation
+{
+	margin: 0;
+	font-size: 0.9em;
+	padding: 1em 0.4em;
+}
+.smf ul#navigation li
+{
+	float: none;
+	font-size: 0.95em;
+	display: inline;
+}
+
+.smf #adm_submenus,
+.smf #adm_submenus ul
+{
+	height: 18px;
+}
+
+.smf h3,
+.smf h4
+{
+	padding-bottom: 3px;
+}
+
+/* The navigation list (i.e. linktree) */
+.smf .navigate_section
+{
+	padding: 0 0.5em 6px 0.5em;
+	margin: 0 0 0 0;
+	font-size: 12px;
+	line-height: 14px;
+}
+.smf .navigate_section ul
+{
+	display: block;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	list-style: none;
+	clear: both;
+	width: 100%;
+}
+.smf .navigate_section ul li
+{
+	float: left;
+	padding: 0 0.5em 0 0;
+}
+.smf .navigate_section ul li a
+{
+	color: #dd4814;
+	text-decoration: none;
+}
+
+.smf .navigate_section ul li a:hover {
+	text-decoration: underline;
+}
+
+/* The footer wih copyright links etc. */
+.smf #footer_section
+{
+	text-align: center;
+	background: url(../images/theme/main_block.png) no-repeat 0 -820px;
+	padding-left: 20px;
+}
+.smf #footer_section span.smalltext
+{
+	font-size: 100%;
+}
+.smf #footer_section div.frame
+{
+	background: url(../images/theme/main_block.png) no-repeat 100% -820px;
+	display: block;
+	padding: 60px 0 0 0;
+}
+.smf #footer_section ul li,
+.smf #footer_section p
+{
+	font-size: 0.8em;
+}
+.smf #footer_section ul li
+{
+	display: inline;
+	padding-right: 5px;
+}
+.smf #footer_section ul li.copyright
+{
+	display: block;
+}
+.smf select.qaction,
+.smf input.qaction
+{
+	font-size: 0.85em;
+	padding: 0;
+}
+.smf #mlist table tbody td.windowbg2
+{
+	text-align: center;
+}
+
+/* Styles for a typical table.
+------------------------------------------------------- */
+.smf table.table_list
+{
+	width: 100%;
+}
+.smf table.table_list p
+{
+	padding: 0;
+	margin: 0;
+}
+.smf table.table_list td,
+.smf table.table_list th
+{
+	padding: 5px;
+}
+.smf table.table_list tbody.header td
+{
+	padding: 0;
+}
+.smf table.table_list tbody.content td.stats
+{
+	font-size: 90%;
+	width: 15%;
+	text-align: center;
+}
+.smf table.table_list tbody.content td.lastpost
+{
+	line-height: 16px;
+	font-size: 12px;
+	width: 24%;
+}
+.smf table.table_list tbody.content td.icon
+{
+	text-align: center;
+	width: 6%;
+}
+
+/* Styles for the board index.
+------------------------------------------------- */
+
+/* the board title! */
+.smf .table_list tbody.content td.info a.subject {
+	font-size: 16px;
+	line-height: 20px;
+	color: #dd4814;
+	text-decoration: none;
+}
+.smf .table_list tbody.content td.info a.subject:hover {
+	text-decoration: underline;
+}
+.smf .table_list tbody.content td.children
+{
+	color: #333;
+	font-size: 85%;
+}
+.smf p.moderators
+{
+	font-size: 0.8em;
+}
+.smf .table_list tbody.content td.children {
+	font-size: 14px;
+	line-height: 18px;
+	padding-left: 0.7em;
+}
+.smf .table_list tbody.content td.children strong {
+	font-weight: normal;
+}
+.smf .table_list tbody.content td.children a {
+	color: #dd4814;
+	text-decoration: none;
+}
+.smf .table_list tbody.content td.children a:hover {
+	text-decoration: underline;
+}
+/* hide the table header/footer parts - but its here for those needing to style it */
+.smf #boardindex_table .table_list thead,
+.smf #boardindex_table .table_list tfoot
+{
+	display: none;
+}
+
+/* the posting icons */
+.smf #posting_icons
+{
+	padding: 0 1em 0.5em 1em;
+	margin: 0 0 1em 0;
+	line-height: 1em;
+}
+.smf #posting_icons ul
+{
+	font-size: 0.8em;
+}
+.smf #posting_icons img
+{
+	vertical-align: middle;
+	margin: 0 0 0 4ex;
+}
+.smf #postbuttons_upper ul li a span
+{
+	line-height: 19px;
+	padding: 0 0 0 6px;
+}
+.smf .nextlinks
+{
+	text-align: right;
+	margin-top: -1px;
+}
+.smf .nextlinks_bottom
+{
+	clear: right;
+	text-align: right;
+}
+.smf .mark_read
+{
+	padding: 0 0.5em;
+}
+
+/* the newsfader */
+.smf #newsfader
+{
+	margin: 0 2px;
+	background: #FFF;
+}
+.smf #smfFadeScroller
+{
+	text-align: center;
+	padding: 0 2em;
+	overflow: auto;
+	margin: 1em 0;
+	color: #575757; /* shouldn't be shorthand style due to a JS bug in IE! */
+	background: #FFF;
+}
+
+/* Styles for the info center on the board index.
+---------------------------------------------------- */
+
+.smf #upshrinkHeaderIC
+{
+	margin-top: 4px;
+}
+.smf dl#ic_recentposts
+{
+	margin: 0 0 0.5em 0;
+	padding: 0.5em;
+	line-height: 1.3em;
+}
+.smf dl#ic_recentposts dt
+{
+	float: left;
+}
+.smf dl#ic_recentposts dd
+{
+	text-align: right;
+}
+.smf #upshrinkHeaderIC p
+{
+	margin: 0 0 0.5em 0;
+	padding: 0.5em;
+	font-size: 12px;
+	line-height: 16px;
+}
+.smf #upshrinkHeaderIC p.last
+{
+	margin: 0;
+	margin-top: 4px;
+	padding: 0.5em;
+	padding-bottom: 0;
+	border-top: 2px dotted #bbb;
+}
+.smf #upshrinkHeaderIC p.inline
+{
+	border: none;
+	margin: 0;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+}
+.smf #upshrinkHeaderIC p.stats
+{
+	font-size: 1.1em;
+	padding-top: 8px;
+}
+.smf #upshrinkHeaderIC p.stats + p a {
+	text-decoration: none;
+}
+.smf #upshrinkHeaderIC p.stats + p a:hover {
+	text-decoration: underline;
+}
+.smf form#ic_login
+{
+	padding: 0.5em;
+	height: 2em;
+}
+.smf form#ic_login ul li
+{
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+.smf form#ic_login ul li label
+{
+	display: block;
+}
+
+/* the small stats */
+.smf #index_common_stats
+{
+	display: block;
+	margin: 0 0 0.5em 0;
+	text-align: right;
+	font-size: 0.9em;
+	position: relative;
+	top: -20px;
+	line-height: 1px;
+}
+
+.smf img.new_posts
+{
+	vertical-align: middle;
+	padding: 0 0.1em;
+}
+/* Styles for the message (topic) index.
+---------------------------------------------------- */
+.smf div.table_frame .table_list
+{
+	border-collapse: collapse;
+	margin: 2px 0;
+}
+.smf .table_frame .table_list td.icon,
+.smf .table_frame .table_list td.info,
+.smf .table_frame .table_list td.stats
+{
+	border-right: 2px solid white;
+}
+.smf #messageindex
+{
+	clear: both;
+}
+/* the page navigation area */
+.smf .childboards
+{
+	margin-bottom: 12px;
+}
+.smf #childboards h3
+{
+	padding-bottom: 0;
+}
+.smf #childboards .table_list thead
+{
+	display: none;
+}
+.smf #childboards .table_list
+{
+	margin-bottom: 1em;
+}
+.smf .lastpost img
+{
+	float: right;
+	padding: 4px;
+	padding-top: 9px;
+}
+
+/* Styles for the display template (topic view).
+---------------------------------------------------- */
+
+.smf #postbuttons div.buttons
+{
+	padding: 0.5em;
+	width: 40%;
+	float: right;
+}
+.smf #postbuttons div.middletext
+{
+	width: 60%;
+}
+.smf #postbuttons span
+{
+	display: block;
+	text-align: right;
+}
+.smf #postbuttons span.lower
+{
+	clear: right;
+}
+.smf #postbuttons .buttonlist
+{
+	float: right;
+}
+.smf #postbuttons #pagelinks
+{
+	padding-top: 1em;
+}
+.smf #moderationbuttons
+{
+	overflow: hidden;
+}
+/* Events */
+.smf .linked_events
+{
+	padding: 1em 0;
+}
+.smf .edit_event
+{
+	margin: 0 1em;
+	vertical-align: middle;
+}
+/* Poll question */
+.smf #poll
+{
+	overflow: hidden;
+}
+.smf #poll .content
+{
+	padding: 0 1em;
+}
+.smf h4#pollquestion
+{
+	padding: 0 0 0.5em 2em;
+}
+
+/* Poll vote options */
+.smf #poll_options ul.options
+{
+	border-top: 1px solid #bbb;
+	padding: 1em 2.5em 0 2em;
+	margin: 0 0 1em 0;
+}
+.smf #poll_options div.submitbutton
+{
+	border-bottom: 1px solid #bbb;
+	clear: both;
+	padding: 0 0 1em 2em;
+	margin: 0 0 1em 0;
+}
+
+/* Poll results */
+.smf #poll_options dl.options
+{
+	border: solid #bbb;
+	border-width: 1px 0;
+	padding: 1em 2.5em 1em 2em;
+	margin: 0 1em 1em 0;
+	line-height: 1.1em !important;
+}
+
+.smf #poll_options dl.options dt
+{
+	padding: 0.3em 0;
+	width: 30%;
+	float: left;
+	margin: 0;
+	clear: left;
+}
+
+.smf #poll_options dl.options .voted
+{
+	font-weight: bold;
+}
+
+.smf #poll_options dl.options dd
+{
+	margin: 0 0 0 2em;
+	padding: 0.1em 0 0 0;
+	width: 60%;
+	max-width: 450px;
+	float: left;
+}
+
+.smf #poll_options dl.options .percentage
+{
+	display: block;
+	float: right;
+	padding: 0.2em 0 0.3em 0;
+}
+
+/* Poll notices */
+.smf #poll_options p
+{
+	margin: 0 1.5em 0.2em 1.5em;
+	padding: 0 0.5em 0.5em 0.5em;
+}
+
+.smf div#pollmoderation
+{
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+}
+
+/* onto the posts */
+.smf #forumposts
+{
+	clear: both;
+}
+.smf #forumposts .cat_bar
+{
+	margin: 0 0 2px 0;
+}
+/* author and topic information */
+.smf #forumposts h3 span#author
+{
+	margin: 0 7.7em 0 0;
+}
+.smf #forumposts h3 img
+{
+	float: left;
+	margin: 4px 0.5em 0 0;
+}
+.smf #forumposts h3.catbg
+{
+	margin-bottom: 3px;
+}
+.smf p#whoisviewing
+{
+	margin: 0;
+	padding: 4px 6px 6px 6px;
+}
+/* poster and postarea + moderation area underneath */
+.smf .post_wrapper
+{
+	float:left;
+	width:100%;
+}
+.smf .poster
+{
+	float: left;
+	width: 12em;
+	text-align: center;
+}
+.smf .postarea,
+.smf .moderatorbar
+{
+	position: relative;
+	margin: 0 0 0 13em;
+}
+.smf .postarea div.flow_hidden
+{
+	width: 100%;
+}
+
+.smf .moderatorbar
+{
+	clear: right;
+}
+/* poster details and list of items */
+.smf .poster ul
+{
+	margin-left: 1.3em;
+	margin-right: 0.1em;
+}
+.smf .poster h4
+{
+	margin: 0.1em 0 6px 0.8em;
+	padding: 0;
+	font-size: 120%;
+}
+.smf .poster h4 a
+{
+	color: #dd4814; 
+	text-decoration: none;
+}
+.smf .poster h4 a:hover {
+	text-decoration: underline;
+}
+.smf .poster li.postcount,
+.smf .poster ul ul,
+.smf .poster li.warning
+{
+	margin: 6px 0 0 0;
+	padding: 0;
+}
+.smf .poster li.title,
+.smf .poster li.membergroup,
+.smf .poster li.avatar,
+.smf .poster li.blurb {
+	margin: 0;
+	padding: 0;
+}
+.smf .poster li.stars {
+	margin: 6px 0;
+}
+.smf li.postcount,
+.smf li.im_icons ul
+{
+	margin-top: 6px;
+}
+.smf .poster ul ul li
+{
+	display: inline;
+}
+.smf .poster li.avatar
+{
+	overflow: hidden;
+}
+.smf .poster li.warning
+{
+	line-height: 1.2em;
+}
+.smf .poster li.warning a img
+{
+	vertical-align: bottom;
+	padding: 0 0.2em;
+}
+.smf .poster li.profile img[src$="im_on.png"],
+.smf .poster li.profile img[src$="im_off.png"] {
+	position: relative;
+	top: 1px;
+}
+.smf .messageicon
+{
+	float: left;
+	margin: 0 0.5em 0 0;
+}
+.smf .messageicon img
+{
+	padding: 6px 3px;
+}
+.smf .keyinfo
+{
+	float: left;
+	width: 50%;
+}
+.smf .keyinfo h5 a {
+	text-decoration: none;
+	color: #dd4814;
+}
+.smf .keyinfo h5 a:hover {
+	text-decoration: underline;
+}
+.smf .modifybutton
+{
+	position: absolute;
+	bottom: 0;
+	margin: 0 16px 4px 0;
+	text-align: right;
+	font: bold 0.85em;
+	color: #334466;	
+}
+/* The quick buttons */
+.smf div.quickbuttons_wrap
+{
+	padding: 0.2em 0;
+	width: 100%;
+	float: left;
+}
+
+.smf ul.quickbuttons
+{
+	margin: 0.9em 11px 0 0;
+	clear: right;
+	float: right;
+	text-align: right;
+	font: bold 0.85em;
+}
+.smf ul.quickbuttons li
+{
+	float: left;
+	display: inline;
+	margin: 0 0 0 11px;
+}
+.smf ul.quickbuttons li a
+{
+	height: 20px;
+	line-height: 20px;
+}
+.smf ul.quickbuttons li > a:first-child {
+	padding-left: 20px;
+}
+.smf ul.quickbuttons li.quote_button
+{
+	background: url(../images/theme/quickbuttons.png) no-repeat 0 1px;
+}
+.smf ul.quickbuttons li.remove_button
+{
+	background: url(../images/theme/quickbuttons.png) no-repeat 0 -30px;
+}
+.smf ul.quickbuttons li.modify_button
+{
+	background: url(../images/theme/quickbuttons.png) no-repeat 0 -60px;
+}
+.smf ul.quickbuttons li.approve_button
+{
+	background: url(../images/theme/quickbuttons.png) no-repeat 0 -90px;
+}
+.smf ul.quickbuttons li.restore_button
+{
+	background: url(../images/theme/quickbuttons.png) no-repeat 0 -120px;
+}
+.smf ul.quickbuttons li.split_button
+{
+	background: url(../images/theme/quickbuttons.png) no-repeat 0 -150px;
+}
+.smf ul.quickbuttons li.reply_button
+{
+	background: url(../images/theme/quickbuttons.png) no-repeat 0 -180px;
+}
+.smf ul.quickbuttons li.reply_all_button
+{
+	background: url(../images/theme/quickbuttons.png) no-repeat 0 -180px;
+}
+.smf ul.quickbuttons li.notify_button
+{
+	background: url(../images/theme/quickbuttons.png) no-repeat 0 -210px;
+}
+.smf ul.quickbuttons li.inline_mod_check
+{
+	margin: 4px 0 0 10px;
+}
+
+.smf .post
+{
+	margin-top: 0.5em;
+	clear: right;
+}
+.smf .inner
+{
+	padding: 1em 1em 1em 0;
+	margin: 0 1em 0 0;
+	border-top: 1px solid #bbb;
+}
+.smf .inner img.smiley
+{
+	vertical-align: bottom;
+}
+.smf #forumposts .modified
+{
+	float: left;
+}
+.smf #forumposts .reportlinks
+{
+	margin-right: 1.5em;
+	text-align: right;
+	clear: right;
+}
+
+.smf #forumposts .reportlinks img {
+	vertical-align: middle;
+}
+
+.smf #forumposts .signature,
+.smf .post .signature
+{
+	margin: 1em 0 0 0;
+}
+.smf #forumposts span.botslice
+{
+	clear: both;
+}
+.smf .attachments hr
+{
+	clear: both;
+	margin: 1em 0 1em 0;
+}
+.smf .attachments
+{
+	padding: 1em 0 2em 0;
+}
+.attachments div
+{
+	padding: 0 0.5em;
+}
+
+/* Styles for the quick reply area.
+---------------------------------------------------- */
+
+.smf #quickreplybox
+{
+	padding-bottom: 1px;
+}
+.smf #quickReplyOptions .roundframe
+{
+	padding: 0 10%;
+}
+.smf #quickReplyOptions form textarea
+{
+	height: 100px;
+	width: 635px;
+	max-width: 100%;
+	min-width: 100%;
+	margin: 0.25em 0 1em 0;
+}
+
+/* The jump to box */
+.smf #display_jump_to
+{
+	clear: both;
+	padding: 5px;
+	margin-top: 6px;
+	text-align: right;
+}
+
+/* Separator of posts. More useful in the print stylesheet. */
+.smf #forumposts .post_separator
+{
+	display: none;
+}
+
+/* Styles for edit post section
+---------------------------------------------------- */
+.smf form#postmodify .roundframe
+{
+	padding: 8px 12% 0 12%;
+}
+.smf form#postmodify .information {
+	margin-bottom: 12px;
+}
+.smf form#postmodify .post {
+	margin-top: 0;
+}
+.smf #post_header,
+.smf .postbox
+{
+	padding: 0 0.5em;
+	overflow: hidden;
+}
+.smf #post_header dt,
+.smf .postbox dt
+{
+	float: left;
+	padding: 0;
+	width: 20%;
+	margin: .3em 0 .2em 0;
+	font-weight: bold;
+}
+.smf #post_header dd,
+.smf .postbox dd
+{
+	float: left;
+	padding: 0;
+	width: 78%;
+	margin: .3em 0;
+}
+.smf #post_header img
+{
+	vertical-align: middle;
+}
+.smf ul.post_options
+{
+	margin: 0 0 0 1em;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+.smf ul.post_options li
+{
+	margin: 0.2em 0;
+	width: 49%;
+	float: left;
+}
+.smf #postAdditionalOptionsHeader
+{
+	margin-top: 1em;
+}
+.smf #postMoreOptions
+{
+	border-bottom: 1px solid #bbb;
+	padding: 0.5em;
+}
+.smf #postAttachment,
+.smf #postAttachment2
+{
+	overflow: hidden;
+	margin: .5em 0;
+	padding: 0;
+	border-bottom: 1px solid #bbb;
+	padding: 0.5em;
+}
+.smf #postAttachment dd,
+.smf #postAttachment2 dd
+{
+	margin: .3em 0 .3em 1em;
+}
+.smf #postAttachment dt,
+.smf #postAttachment2 dt
+{
+	font-weight: bold;
+}
+.smf #postAttachment3
+{
+	margin-left: 1em;
+}
+.smf #post_confirm_strip,
+.smf #shortcuts
+{
+	padding: 1em 0 0 0;
+}
+.smf .post_verification
+{
+	margin-top: .5em;
+}
+.smf .post_verification #verification_control
+{
+	margin: .3em 0 .3em 1em;
+}
+/* The BBC buttons */
+.smf #bbcBox_message
+{
+	margin: 12px 8px;
+}
+.smf #bbcBox_message div
+{
+	margin: 2px 0;
+	vertical-align: top;
+}
+.smf #bbcBox_message div img
+{
+	margin: 0 1px 0 0;
+	vertical-align: top;
+}
+.smf #bbcBox_message select
+{
+	margin: 0.5ex 2px !important;
+}
+/* The smiley strip */
+.smf #smileyBox_message
+{
+	margin: 12px 8px;
+}
+.smf #smileyBox_message div {
+	display: inline;
+}
+.smf #smileyBox_message div img {
+	vertical-align: middle;
+}
+.smf #smileyBox_message a {
+	padding-left: 8px;
+}
+/* Styles for edit event section
+---------------------------------------------------- */
+.smf #post_event .roundframe
+{
+	padding: 0 12%;
+}
+.smf #post_event fieldset
+{
+	padding: 0.5em;
+	clear: both;
+}
+.smf #post_event #event_main input
+{
+	margin: 0 0 1em 0;
+	float: left;
+}
+.smf #post_event #event_main div.smalltext
+{
+	width: 33em;
+	float: right;
+}
+.smf #post_event div.event_options
+{
+	float: right;
+}
+.smf #post_event ul.event_main,
+.smf ul.event_options
+{
+	padding: 0;
+	overflow: hidden;
+}
+.smf #post_event ul.event_main li
+{
+	list-style-type: none;
+	margin: 0.2em 0;
+	width: 49%;
+	float: left;
+}
+.smf #post_event ul.event_options
+{
+	margin: 0;
+	padding: 0 0 .7em .7em;
+}
+.smf #post_event ul.event_options li
+{
+	list-style-type: none;
+	margin: 0;
+	float: left;
+}
+.smf #post_event #event_main select,
+.smf #post_event ul.event_options li select,
+.smf #post_event ul.event_options li .input_check
+{
+	margin: 0 1em 0 0;
+}
+
+/* Styles for edit poll section.
+---------------------------------------------------- */
+
+.smf #edit_poll
+{
+	overflow: hidden;
+}
+.smf #edit_poll fieldset
+{
+	padding: 0.5em;
+	clear: both;
+	overflow: hidden;
+}
+.smf #edit_poll fieldset input
+{
+	margin-left: 8.1em;
+}
+.smf #edit_poll ul.poll_main li
+{
+	padding-left: 1em;
+}
+.smf #edit_poll ul.poll_main input
+{
+	margin-left: 1em;
+}
+.smf #edit_poll ul.poll_main,
+.smf dl.poll_options
+{
+	overflow: hidden;
+	padding: 0 0 .7em .7em;
+	list-style: none;
+}
+.smf #edit_poll ul.poll_main li
+{
+	margin: 0.2em 0;
+}
+.smf #edit_poll dl.poll_options dt
+{
+	width: 33%;
+	padding: 0 0 0 1em;
+}
+.smf #edit_poll dl.poll_options dd
+{
+	width: 65%;
+}
+.smf #edit_poll dl.poll_options dd input
+{
+	margin-left: 0; 
+}
+
+/* Styles for the recent messages section.
+---------------------------------------------------- */
+
+.smf #readbuttons_top .pagelinks,
+.smf #readbuttons .pagelinks
+{
+	padding-bottom: 1em;
+	width: 60%;
+}
+.smf #readbuttons .pagelinks
+{
+	padding-top: 1em;
+}
+.smf #recent
+{
+	clear: both;
+}
+
+/* Styles for the move topic section.
+---------------------------------------------------- */
+
+.smf #move_topic dl
+{
+	margin-bottom: 0;
+}
+.smf #move_topic dl.settings dt
+{
+	width: 40%;
+}
+.smf #move_topic dl.settings dd
+{
+	width: 59%;
+}
+.smf .move_topic
+{
+	width: 710px;
+	margin: auto;
+	text-align: left;
+}
+.smf div.move_topic fieldset
+{
+	padding: 0.5em;
+}
+
+/* Styles for the send topic section.
+---------------------------------------------------- */
+
+.smf fieldset.send_topic
+{
+	border: none;
+	padding: 0.5em;
+}
+.smf dl.send_topic
+{
+	margin-bottom: 0;
+}
+.smf dl.send_mail dt
+{
+	width: 35%;
+}
+.smf dl.send_mail dd
+{
+	width: 64%;
+}
+
+/* Styles for the report topic section.
+---------------------------------------------------- */
+
+.smf #report_topic dl
+{
+	margin-bottom: 0;
+}
+.smf #report_topic dl.settings dt
+{
+	width: 20%;
+}
+.smf #report_topic dl.settings dd
+{
+	width: 79%;
+}
+
+/* Styles for the split topic section.
+---------------------------------------------------- */
+
+.smf div#selected,
+.smf div#not_selected
+{
+	width: 49%;
+}
+.smf ul.split_messages li.windowbg,
+.smf ul.split_messages li.windowbg2
+{
+	margin: 1px;
+}
+.smf ul.split_messages li a.split_icon
+{
+	padding: 0 0.5em;
+}
+.smf ul.split_messages div.post
+{
+	padding: 1em 0 0 0;
+	border-top: 1px solid #fff;
+}
+
+/* Styles for the merge topic section.
+---------------------------------------------------- */
+.smf ul.merge_topics li
+{
+	list-style-type: none;
+}
+.smf dl.merge_topic dt
+{
+	width: 25%;
+}
+.smf dl.merge_topic dd
+{
+	width: 74%;
+}
+.smf fieldset.merge_options
+{
+	clear: both;
+}
+.smf .custom_subject
+{
+	margin: 0.5em 0;
+}
+
+/* Styles for the login areas.
+------------------------------------------------------- */
+.smf .login
+{
+	width: 540px;
+	margin: 0 auto;
+}
+.smf .login dl
+{
+	overflow: auto;
+	clear: right;
+}
+.smf .login dt,
+.smf .login dd
+{
+	margin: 0 0 0.4em 0;
+	width: 44%;
+	padding: 0.1em;
+}
+.smf .login dt
+{
+	float: left;
+	clear: both;
+	text-align: right;
+	font-weight: bold;
+}
+.smf .login dd
+{
+	width: 54%;
+	float: right;
+	text-align: left;
+}
+.smf .login p
+{
+	text-align: center;
+}
+
+/* Styles for the registration section.
+------------------------------------------------------- */
+.smf .register_error
+{
+	border: 1px dashed red;
+	padding: 5px;
+	margin: 0 1ex 1ex 1ex;
+}
+.smf .register_error span
+{
+	text-decoration: underline;
+}
+
+/* Additional profile fields */
+.smf dl.register_form
+{
+	margin: 0;
+	clear: right;
+	/* overflow: auto; */
+}
+
+.smf dl.register_form dt
+{
+	font-weight: normal;
+	float: left;
+	clear: both;
+	width: 50%;
+	margin: 0.5em 0 0 0;
+}
+
+.smf dl.register_form dt strong
+{
+	font-weight: bold;
+}
+
+.smf dl.register_form dt span
+{
+	display: block;
+}
+
+.smf dl.register_form dd
+{
+	float: left;
+	width: 49%;
+	margin: 0.5em 0 0 0;
+}
+
+.smf #confirm_buttons
+{
+	text-align: center;
+	padding: 1em 0;
+}
+
+.smf .coppa_contact
+{
+	padding: 4px;
+	width: 32ex;
+	background-color: #fff;
+	color: #000;
+	margin-left: 5ex;
+	border: 1px solid #000;
+}
+
+.smf .valid_input
+{
+	background-color: #f5fff0;
+}
+.smf .invalid_input
+{
+	background-color: #fff0f0;
+}
+
+/* Styles for maintenance mode.
+------------------------------------------------------- */
+.smf #maintenance_mode
+{
+	width: 75%;
+	min-width: 520px;
+	text-align: left;
+}
+.smf #maintenance_mode img.floatleft
+{
+	margin-right: 1em;
+}
+
+/* common for all admin sections */
+.smf h3.titlebg img
+{
+	vertical-align: middle;
+	margin-right: 0.5em;
+	margin-top: -1px;
+}
+.smf tr.titlebg td
+{
+	padding-left: 0.7em;
+}
+.smf #admin_menu
+{
+	min-height: 22px;
+	padding-left: 0;
+}
+.smf #admin_content
+{
+	clear: left;
+	padding-top: 4px;
+}
+/* Custom profile fields like to play with us some times. */
+.smf #admin_content .custom_field
+{
+	margin-bottom: 15px;
+}
+.smf #admin_login .centertext
+{
+	padding: 1em;
+}
+.smf #admin_login .centertext .error
+{
+	padding: 0 0 1em 0;
+}
+
+/* Styles for sidebar menus.
+------------------------------------------------------- */
+.smf .left_admmenu,
+.smf .left_admmenu ul,
+.smf .left_admmenu li
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.smf #left_admsection
+{
+	width: 160px;
+	float: left;
+	padding-right: 10px;
+}
+.smf .adm_section h4.titlebg
+{
+	font-size: 95%;
+	margin-bottom: 5px;
+}
+.smf #adm_container
+{
+	border-bottom: 1px solid #bbb;
+	margin-bottom: 5px;
+}
+.smf .left_admmenu li
+{
+	padding: 0 0 0 0.5em;
+}
+.smf .left_admmenu
+{
+	margin-bottom: 0.5em;
+}
+.smf #main_admsection
+{
+	margin-left: 172px;
+	overflow: hidden;
+}
+
+.smf tr.windowbg td,
+.smf tr.windowbg2 td,
+.smf tr.approvebg td,
+.smf tr.highlight2 td
+{
+	padding: 0.3em 0.7em;
+	border: 1px solid #f1f1f1;
+}
+.smf #credits p
+{
+	padding: 0;
+	font-style: italic;
+	margin: 0;
+}
+
+/* Styles for generic tables.
+------------------------------------------------------- */
+.smf .topic_table table
+{
+	width: 100%;
+}
+.smf .topic_table .whos_viewing td.smalltext {
+	font-size: 12px;
+	line-height: 16px;
+}
+.smf .topic_table .icon1,
+.smf .topic_table .icon2,
+.smf .topic_table .stats
+{
+	text-align: center;
+}
+.smf #topic_icons
+{
+	margin: 1em 0 0 0;
+}
+.smf #topic_icons .description
+{
+	margin: 0;
+}
+.smf .topic_table table thead
+{
+	border-bottom: 1px solid #fff;
+}
+/* the subject column */
+.smf .topic_table td
+{
+	font-size: 1em;
+}
+.smf .topic_table td.subject p,
+.smf .topic_table td.stats
+{
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+}
+.smf .topic_table td.lastpost
+{
+	font-size: 0.9em;
+	line-height: 1.3em;
+	padding: 4px;
+}
+.smf .topic_table td.stickybg2
+{
+	background-image: url(../images/icons/quick_sticky.gif);
+	background-repeat: no-repeat;
+	background-position: 98% 13px;
+}
+.smf .topic_table td.lockedbg2
+{
+	background-image: url(../images/icons/quick_lock.gif);
+	background-repeat: no-repeat;
+	background-position: 98% 13px;
+}
+.smf .topic_table td.locked_sticky2
+{
+	background-image: url(../images/icons/quick_sticky_lock.gif);
+	background-repeat: no-repeat;
+	background-position: 98% 13px;
+}
+.smf .topic_table td.lastpost
+{
+	background-image: none;
+}
+
+/* Links */
+
+.smf .topic_table td.subject span a {
+	color: #dd4814;
+	text-decoration: none;
+}
+
+.smf .topic_table td.subject span a:hover {
+	text-decoration: underline;
+}
+
+/* Styles for (fatal) errors.
+------------------------------------------------- */
+
+.smf #fatal_error
+{
+	width: 80%;
+	margin: auto;
+}
+
+.smf .errorbox
+{
+	padding: 8px;
+	border: 1px solid #cc3344;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #000;
+	background-color: #ffe4e9;
+	margin-bottom: 12px;
+}
+.smf .errorbox h3
+{
+	padding: 0;
+	margin: 0;
+	font-size: 1.1em;
+	text-decoration: underline;
+}
+.smf .errorbox p
+{
+	margin: 1em 0 0 0;
+}
+.smf .errorbox p.alert
+{
+	padding: 0;
+	margin: 0;
+	float: left;
+	width: 1em;
+	font-size: 1.5em;
+}
+
+/* Styles for the profile section.
+------------------------------------------------- */
+
+.smf dl
+{
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+}
+
+/* The basic user info on the left */
+.smf #basicinfo
+{
+	margin-top: 4px;
+	width: 20%;
+	float: left;
+}
+.smf #basicinfo .windowbg .content
+{
+	padding-left: 20px;
+}
+.smf #detailedinfo
+{
+	width: 79.5%;
+	float: right;
+}
+.smf #basicinfo h4
+{
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: bold;
+	white-space: pre-wrap;
+	overflow: hidden;
+}
+.smf #basicinfo h4 span.position
+{
+	font-weight: normal;
+	font-size: 14px;
+	display: block;
+}
+.smf #basicinfo img.avatar
+{
+	display: block;
+	margin: 10px 0 0 0;
+}
+.smf #basicinfo ul
+{
+	list-style-type: none;
+	margin: 10px 0 0 0;
+}
+.smf #basicinfo ul li
+{
+	display: block;
+	float: left;
+	margin-right: 5px;
+	height: 20px;
+}
+.smf #basicinfo span#userstatus
+{
+	display: block;
+	clear: both;
+}
+.smf #basicinfo span#userstatus img
+{
+	vertical-align: middle;
+}
+.smf #detailedinfo {
+	margin-top: 4px;
+}
+.smf #detailedinfo div.content dl,
+.smf #tracking div.content dl
+{
+	clear: right;
+	overflow: auto;
+	margin: 0 0 18px 0;
+	padding: 0 0 15px 0;
+	border-bottom: 1px #bbb solid;
+}
+.smf #detailedinfo div.content dt,
+.smf #tracking div.content dt
+{
+	width: 35%;
+	float: left;
+	margin: 0 0 3px 0;
+	padding: 0;
+	clear: both;
+}
+.smf #detailedinfo div.content dd,
+.smf #tracking div.content dd
+{
+	width: 65%;
+	float: left;
+	margin: 0 0 3px 0;
+	padding: 0;
+}
+.smf #detailedinfo div.content dl.noborder
+{
+	border-bottom: 0;
+}
+.smf #detailedinfo div.content dt.clear
+{
+	width: 100%;
+}
+.smf .signature,
+.smf .custom_fields_above_signature
+{
+	border-top: 1px #bbb solid;
+}
+.smf .signature h5
+{
+	font-size: 14px;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+.smf #personal_picture
+{
+	display: block;
+	margin-bottom: 0.3em;
+}
+.smf #avatar_server_stored div
+{
+	float: left;
+}
+
+.smf #main_admsection #basicinfo,
+.smf #main_admsection #detailedinfo
+{
+	width: 100%;
+}
+.smf #main_admsection #basicinfo h4
+{
+	float: left;
+	width: 35%;
+}
+.smf #main_admsection #basicinfo img.avatar
+{
+	float: right;
+	vertical-align: top;
+}
+.smf #main_admsection #basicinfo ul
+{
+	clear: left;
+}
+.smf #main_admsection #basicinfo span#userstatus
+{
+	clear: left;
+}
+.smf #main_admsection #basicinfo p#infolinks
+{
+	display: none;
+	clear: both;
+}
+.smf #main_admsection #basicinfo .botslice
+{
+	clear: both;
+}
+
+/* Simple feedback messages */
+.smf div#profile_error,
+.smf div#profile_success
+{
+	margin: 0 0 1em 0;
+	padding: 1em 2em;
+	border: 1px solid;
+}
+.smf div#profile_error
+{
+	border-color: red;
+	color: red;
+	background: #fee;
+}
+
+.smf div#profile_error span
+{
+	text-decoration: underline;
+}
+
+.smf div#profile_success
+{
+	border-color: green;
+	color: green;
+	background: #efe;
+}
+
+/* Profile statistics */
+.smf #generalstats div.content dt
+{
+	width: 50%;
+	float: left;
+	margin: 0 0 3px 0;
+	padding: 0;
+	font-weight: bold;
+	clear: both;
+}
+.smf #generalstats div.content dd
+{
+	width: 50%;
+	float: left;
+	margin: 0 0 3px 0;
+	padding: 0;
+}
+
+/* Activity by time */
+.smf #activitytime
+{
+	margin: 6px 0;
+}
+.smf .activity_stats
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.smf .activity_stats li
+{
+	margin: 0;
+	padding: 0;
+	width: 4.16%;
+	float: left;
+}
+.smf .activity_stats li span
+{
+	display: block;
+	border: solid #000;
+	border-width: 1px 1px 0 0;
+	text-align: center;
+}
+.smf .activity_stats li.last span
+{
+	border-right: none;
+}
+.smf .activity_stats li div.bar
+{
+	margin: 0 auto;
+	width: 15px;
+}
+.smf .activity_stats li div.bar div
+{
+	background: #6294CE;
+}
+.smf .activity_stats li div.bar span
+{
+	position: absolute;
+	top: -1000em;
+	left: -1000em;
+}
+
+/* Most popular boards by posts and activity */
+.smf #popularposts
+{
+	width: 49.5%;
+	float: left;
+}
+.smf #popularactivity
+{
+	width: 49.5%;
+	float: right;
+}
+
+.smf #popularposts div.content dt,
+.smf #popularactivity div.content dt
+{
+	width: 65%;
+	float: left;
+	margin: 0 0 3px 0;
+	padding: 0;
+	font-weight: bold;
+	clear: both;
+}
+.smf #popularposts div.content dd,
+.smf #popularactivity div.content dd
+{
+	width: 35%;
+	float: left;
+	margin: 0 0 3px 0;
+	padding: 0;
+}
+
+.smf .profile_pie
+{
+	background-image: url(../images/stats_pie.png);
+	float: left;
+	height: 20px;
+	width: 20px;
+	margin: 0 1em 0 0;
+	padding: 0;
+	text-indent: -1000em;
+}
+
+/* View posts */
+.smf .topic .time
+{
+	float: right;
+}
+
+.smf .counter
+{
+	margin: 0 0 0 0;
+	padding: 0.2em 0.5em 0.1em 0.2em;
+	font-size: 2.2em;
+	font-weight: bold;
+	color: #3f3f3f;
+	float: left;
+}
+.smf .list_posts
+{
+	border-top: 2px solid #b3b3bf;
+	padding-top: 12px;
+	margin-top: 6px;
+	overflow: auto;
+}
+
+.smf .core_posts
+{
+	margin-bottom: 3px;
+}
+
+.smf .topic h4
+{
+	margin: 3px 0;
+}
+
+.smf .topic .post
+{
+	margin: 0 1em;
+	min-height: 80px;
+	height: auto !important;
+	height: 80px;
+}
+
+.smf .topic .mod_icons
+{
+	text-align: right;
+	margin-right: 1em;
+}
+
+.smf #tracking div.content dl
+{
+	border-bottom: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.smf #creator dl
+{
+	margin: 0;
+}
+.smf #creator dt
+{
+	width: 40%;
+	float: left;
+	clear: both;
+	margin: 0 0 10px 0;
+}
+.smf #creator dd
+{
+	float: left;
+	width: 55%;
+	margin: 0 0 10px 2px;
+}
+
+.smf .ignoreboards
+{
+	margin: 0 2%;
+	padding: 0;
+	width: 45%;
+}
+.smf .ignoreboards a
+{
+	font-weight: bold;
+	border-bottom: 1px solid #c4c4c4;
+	padding: 0.1em 0;
+}
+.smf .ignoreboards a:hover
+{
+	text-decoration: none;
+	border-bottom: 1px solid #334466;
+}
+.smf .ignoreboards ul
+{
+	margin: 0;
+	padding: 0;
+}
+.smf .ignoreboards li
+{
+	list-style: none;
+	float: left;
+	clear: both;
+}
+.smf .ignoreboards li.category
+{
+	margin: 0.7em 0 0 0;
+	width: 100%;
+}
+.smf .ignoreboards li ul
+{
+	margin: 0.2em 0 0 0;
+}
+.smf .ignoreboards li.category ul li.board
+{
+	width: 93%;
+}
+
+.smf #theme_settings
+{
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.smf #theme_settings li
+{
+	list-style: none;
+	margin: 10px 0;
+	padding: 0;
+}
+/* Paid Subscriptions */
+.smf #paid_subscription
+{
+	width: 100%;
+}
+.smf #paid_subscription dl.settings
+{
+	margin-bottom: 0;
+}
+.smf #paid_subscription dl.settings dd,
+.smf #paid_subscription dl.settings dt
+{
+	margin-bottom: 4px;
+}
+/* Pick theme */
+.smf #pick_theme
+{
+	width: 100%;
+	float: left;
+}
+/*Issue a warning*/
+.smf #warn_body{
+	width: 80%;
+	font-size: 0.9em;
+}
+
+/* Styles for the statistics center.
+------------------------------------------------- */
+.smf #statistics
+{
+	padding: 0.5em 0;
+}
+.smf #statistics div.title_bar
+{
+	margin: 4px 0 -2px 0;
+}
+.smf #statistics h3.catbg
+{
+	text-align: center;
+}
+.smf #statistics div.content
+{
+	min-height: 210px;
+}
+.smf #statistics div.top_row
+{
+	min-height: 150px;
+}
+.smf #stats_left,
+.smf #top_posters,
+.smf #top_topics_replies,
+.smf #top_topics_starter
+{
+	float: left;
+	width: 49.5%;
+}
+.smf #stats_right,
+.smf #top_boards,
+.smf #top_topics_views,
+.smf #most_online
+{
+	float: right;
+	width: 49.5%;
+}
+.smf dl.stats
+{
+	clear: both;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.smf dl.stats dt
+{
+	width: 49%;
+	float: left;
+	margin: 0 0 4px 0;
+	line-height: 16px;
+	padding: 0;
+	clear: both;
+	font-size: 1em;
+}
+.smf dl.stats dd
+{
+	text-align: right;
+	width: 50%;
+	font-size: 1em;
+	float: right;
+	margin: 0 0 4px 0;
+	line-height: 16px;
+	padding: 0;
+}
+.smf .statsbar div.bar
+{
+	float: left;
+	background: url(../images/bar_stats.png) no-repeat;
+	display: block;
+	margin: 0 4px;
+	height: 16px;
+}
+.smf .statsbar div.bar div
+{
+	position: relative;
+	right: -4px;
+	padding: 0 4px 0 0;
+	background: url(../images/bar_stats.png) no-repeat 100%;
+	height: 16px;
+}
+.smf tr.windowbg2 th.stats_month
+{
+	width: 25%;
+	padding: 0 2em;
+	text-align: left;
+}
+.smf tr.windowbg2 td.stats_day
+{
+	padding: 0 3.5em;
+	text-align: left;
+}
+
+/* Styles for the personal messages section.
+------------------------------------------------- */
+
+.smf #personal_messages h3 span#author,
+.smf #personal_messages h3 span#topic_title
+{
+	float: left;
+}
+.smf #personal_messages h3 span#author
+{
+	margin: 0 0 0 0.5em;
+}
+.smf #personal_messages h3 span#topic_title
+{
+	margin: 0 0 0 9em;
+}
+.smf #personal_messages div.labels
+{
+	padding: 0 1em 0 0;
+}
+.smf #personal_messages .capacity_bar
+{
+	background: #f0f4f7;
+	display: block;
+	margin: 0.5em 0 0 1em;
+	height: 1em;
+	border: 1px solid #adadad;
+	width: 10em;
+}
+.smf #personal_messages .capacity_bar span
+{
+	border-right: 1px solid #adadad;
+	display: block;
+	height: 1em;
+}
+.smf #personal_messages .capacity_bar span.empty
+{
+	background: #a6d69d;
+}
+.smf #personal_messages .capacity_bar span.filled
+{
+	background: #eea800;
+}
+.smf #personal_messages .capacity_bar span.full
+{
+	background: #f10909;
+}
+.smf #personal_messages .reportlinks
+{
+	padding: 0.5em 1.3em;
+}
+.smf #searchLabelsExpand li
+{
+	padding: 0.3em 0.5em;
+}
+.smf #manrules div.righttext
+{
+	padding: 0.3em 0.1em;
+}
+.smf dl.addrules dt.floatleft
+{
+	width: 15em;
+	color: #333;
+	padding: 0 1.25em 0.5em 1.25em;
+}
+.smf #addrule fieldset
+{
+	clear: both;
+}
+
+/* Styles for the calendar section.
+------------------------------------------------- */
+.smf .calendar_table
+{
+	margin-bottom: 0.7em;
+}
+
+/* Used to indicate the current day in the grid. */
+.smf .calendar_today
+{
+	color: #fff;
+	background-color: #444;
+}
+
+.smf #month_grid
+{
+	width: 200px;
+	text-align: center;
+	float: left;
+}
+.smf #month_grid div.cat_bar
+{
+	height: 30px;
+}
+.smf #month_grid h3.catbg
+{
+	height: 30px;
+	line-height: 30px;
+}
+.smf #month_grid table
+{
+	width: 200px;
+}
+.smf #main_grid table
+{
+	width: 100%;
+	padding-bottom: 4px;
+}
+.smf #main_grid table h3.catbg
+{
+	text-align: center;
+	height: 29px;
+	border-top: 2px solid #fff;
+	border-bottom: none;
+}
+.smf #main_grid table.weeklist td.windowbg
+{
+	text-align: center;
+	height: 49px;
+	width: 25px;
+	font-size: large;
+	padding: 0 7px;
+	border-bottom: 2px solid #fff;
+}
+.smf #main_grid table.weeklist td.weekdays
+{
+	height: 49px;
+	width: 100%;
+	padding: 4px;
+	text-align: left;
+	vertical-align: middle;
+	border-bottom: 2px solid #fff;
+}
+.smf #main_grid h3.weekly
+{
+	text-align: center;
+	padding-left: 0;
+	font-size: large;
+	height: 29px;
+}
+.smf #main_grid h3 span.floatleft,
+.smf #main_grid h3 span.floatright
+{
+	display: block;
+	font-weight: bold;
+}
+.smf #main_grid table th.days
+{
+	width: 14%;
+	padding: 4px 0;
+}
+.smf #main_grid table.weeklist h4.titlebg
+{
+	margin: 0 0 0 0;
+	height: 23px;
+	line-height: 27px;
+}
+.smf #main_grid table td.weeks
+{
+	vertical-align: middle;
+	text-align: center;
+	font-weight: bold;
+	font-size: large;
+}
+.smf #main_grid table td.days
+{
+	vertical-align: top;
+	text-align: center;
+}
+
+.smf a.modify_event
+{
+	color: red;
+}
+
+.smf span.hidelink
+{
+	font-style: italic;
+}
+
+.smf #calendar_navigation
+{
+	text-align: center;
+}
+
+/* Styles for the memberlist section.
+------------------------------------------------- */
+.smf #mlist_search
+{
+	margin: auto;
+	width: 500px;
+}
+
+/* Styles for the basic search section.
+------------------------------------------------- */
+.smf #searchform,
+.smf #simple_search p
+{
+	padding: 0.5em;
+	margin: 0;
+}
+.smf #simple_search,
+.smf #simple_search p,
+.smf #advanced_search
+{
+	text-align: center !important;
+	margin: 0;
+}
+.smf #search_error
+{
+	font-style: italic;
+	padding: 0.3em 1em;
+}
+.smf #search_term_input
+{
+	font-size: 115%;
+	margin: 0 0 1em;
+}
+
+/* Styles for the advanced search section.
+------------------------------------------------- */
+.smf #searchform fieldset
+{
+	text-align: left;
+	padding: 0;
+	border: none;
+}
+.smf #advanced_search dl#search_options
+{
+	margin: 0 auto;
+	width: 600px;
+	padding-top: 1em;
+	overflow: hidden;
+}
+.smf #advanced_search dt
+{
+	clear: both;
+	float: left;
+	padding: 0.2em;
+	text-align: right;
+	width: 20%;
+}
+.smf #advanced_search dd
+{
+	width: 75%;
+	float: left;
+	padding: 0.2em;
+	margin: 0 0 0 0.5em;
+	text-align: left;
+}
+.smf #searchform p.clear
+{
+	clear: both;
+}
+
+/* Styles for the search results page.
+------------------------------------------------- */
+.smf .topic_table td blockquote,
+.smf .topic_table td .quoteheader
+{
+	margin: 0.5em;
+}
+.smf .search_results_posts
+{
+	overflow: hidden;
+}
+.smf .search_results_posts .buttons
+{
+	padding: 5px 1em 0 0;
+}
+
+/* Styles for the help section.
+------------------------------------------------- */
+
+.smf #help_container
+{
+	margin: 8px 0 0 0;
+	padding: 0 0 8px 0;
+}
+.smf #helpmain
+{
+	padding: 0 1em;
+}
+.smf #helpmain h1.section
+{
+	font-size: 18px;
+}
+.smf #helpmain h2.section
+{
+	font-size: 18px;
+	border-bottom: solid 1px;
+	padding-bottom: 0.5em;
+	margin: 0 0 0.5em 0;
+}
+.smf #helpmain h3.section
+{
+	font-size: 16px;
+	font-weight: normal;
+	margin: 2em 0 0.5em 0;
+	padding: 0 0 0.5em 0.5em;
+}
+
+/* Samples should be easily distinguishable. */
+.smf #helpmain .help_sample
+{
+	border: 1px solid #99a;
+	background: #fff;
+	padding: 1em;
+	overflow: auto;
+	margin-bottom: 1em;
+}
+.smf #helpmain .help_sample .navigate_section
+{
+	margin: 0;
+}
+.smf #helpmain .help_sample .navigate_section ul
+{
+	padding-top: 0;
+	border: none;
+}
+
+/* We need some air between the lines */
+.smf #helpmain p
+{
+	margin: 0 0 1.5em 0;
+	line-height: 1.5em;
+}
+.smf #helpmain ol
+{
+	font-weight: bold;
+	list-style-type: disc;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	line-height: 1.5em;
+}
+.smf #helpmain ol.la
+{
+	font-weight: normal;
+	list-style-type: circle;
+	margin: 0.5em 0 1em 0;
+	padding-left: 1.5em;
+}
+
+/* put back the bullets please */
+.smf #helpmain #messageindex
+{
+	clear: right;
+}
+
+/* Styles for print media.
+------------------------------------------------------- */
+@media print
+{
+	#headerarea
+	{
+		display: none;
+	}
+
+	.tborder
+	{
+		border: none;
+	}
+}
+
+.new_win{width: 400px; height: 400px;}
+
+/* ################################################## */
+/*                Ubuntu-portal styles                */
+/* ################################################## */
+
+/* ################################################## */
+/*        index - basic template elements             */
+/* ################################################## */
+
+/* Top hideable block with profile and news */
+.smf #upper_section {
+	padding: 16px;
+	margin-bottom: 8px;
+	border: 1px solid #dfdcd9;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #e8e8e8;
+}
+
+.smf #upper_section a {
+	color: #dd4814;
+	text-decoration: none;
+}
+
+.smf #upper_section a:hover {
+	text-decoration: underline;
+}
+
+.smf #upper_section > div {
+	display: table;
+	width: 100%;
+}
+
+.smf #upper_section > div > div {
+	display: table-row;
+}
+
+.smf #upper_section > div > div > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.smf #upper_section div.user img,
+.smf #upper_section div.user ul {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.smf #upper_section div.user img + ul {
+	padding-left: 8px;
+}
+
+.smf #upper_section div.user ul > li:first-child {
+	font-weight: bold;
+}
+
+.smf #upper_section div.user ul li {
+	margin-bottom: 2px;
+}
+
+.smf #upper_section div.user ul li.last {
+	margin-bottom: 0px;
+}
+
+.smf #upper_section div.news {
+	width: 50%;
+	text-align: center;
+	background-color: #fff;
+	border: 1px solid #dfdcd9;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding: 8px;
+}
+
+.smf #upper_section div.news p {
+	display: inline;
+}
+
+.smf #upper_section div.news form {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.smf #upper_section #guest_form {
+	overflow: hidden;
+}
+
+.smf #upper_section #guest_form .info {
+	padding: 4px 0;
+}
+
+/* Copurate and other stuff at page bottom */
+.smf #bottom_info {
+	margin-top: 8px;
+	padding: 0px 3px;
+	text-align: center;
+	color: #aea79f;
+	position: relative;
+}
+
+.smf #bottom_info,
+.smf #bottom_info .smalltext {
+	font-size: 10px;
+	line-height: 14px;
+}
+
+.smf #bottom_info a {
+	color: #aea79f;
+	text-decoration: none;
+}
+
+.smf #bottom_info a:hover {
+	color: #dd4814;
+	text-decoration: none;
+}
+
+.smf #techlinks {
+	float: left;
+}
+
+.smf #techlinks a {
+	padding-right: 6px;
+}
+
+.smf #smf_copyright {
+	float: right;
+}
