@@ -8,6 +8,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 @font-face {
@@ -110,7 +111,6 @@ div#__container {
 
 div#__container > div:first-child {
 	margin: 0px auto;
-	min-width: 1000px;
 	/*width: 1000px;*/
 	max-width: 1400px;
 	position: relative;
@@ -494,6 +494,8 @@ body.dark #__search-box {
 	position: relative;
 	padding: 0 16px 16px 16px;
 	color: #222;
+    margin: auto;
+    max-width: 100%;
 }
 
 #__main-title h1 {

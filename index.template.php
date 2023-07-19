@@ -6,6 +6,7 @@
  * @author   Vadim Nevorotin <malamut@ubuntu.ru>
  * @author   Sasan Namiranian <sasy360@gmail.com>
  * @author   Moein Alinaghian <nixoeen at nixoeen.com>
+ * @author   Mohammad Mahdi Vahedi <mimvhd at pm.me>
  * @license  GPL 3 (http://www.gnu.org/licenses/gpl.html)
  *
  * @version  2.0
@@ -59,7 +60,7 @@ function template_init()
 	/* What document type definition is being used? (for font size and other issues.)
 		'xhtml' for an XHTML 1.0 document type definition.
 		'html' for an HTML 4.01 document type definition. */
-	$settings['doctype'] = 'xhtml';
+	$settings['doctype'] = 'html';
 
 	/* The version this template/theme is for.
 		This should probably be the version of SMF it was created for. */
@@ -90,12 +91,14 @@ function template_html_above()
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
 
 	// Show right to left and the character set for ease of translating.
-	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	echo '<!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml"', $context['right_to_left'] ? ' dir="rtl"' : '', '>
 <head>';
 
 	# Init portal metaheaders
 	$context['ubuntu-portal']->getFirstMetaheaders();	
+	echo '
+	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/portal/', 'ubuntu-portal.css" />';
 
 	// The ?fin part of this link is just here to make sure browsers don't cache it wrongly.
 	# We should rename our main CSS to be sure that mods willn't change it
@@ -141,6 +144,7 @@ function template_html_above()
 	<meta http-equiv="Content-Type" content="text/html; charset=', $context['character_set'], '" />
 	<meta name="description" content="', $context['page_title_html_safe'], '" />', !empty($context['meta_keywords']) ? '
 	<meta name="keywords" content="' . $context['meta_keywords'] . '" />' : '', '
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>', $context['page_title_html_safe'], '</title>';
 
 	// Please don't index these Mr Robot.

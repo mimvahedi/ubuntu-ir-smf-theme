@@ -91,7 +91,7 @@ body,
 .smf select,
 .smf textarea
 {
-	font: 95%/115%;
+	font: inherit;
 	color: #000;
 	background: #fff;
 	border: 1px solid #ccc;
@@ -108,6 +108,7 @@ body,
 .smf select option
 {
 	padding: 1px;
+	font-size: 1rem;
 }
 
 /* The font size of textareas should be just a little bit larger. */
@@ -2212,7 +2213,7 @@ body,
 }
 .smf .inner img.smiley
 {
-	vertical-align: bottom;
+	vertical-align: middle;
 }
 .smf #forumposts .modified
 {
@@ -2397,7 +2398,7 @@ body,
 .smf #bbcBox_message div img
 {
 	margin: 0 1px 0 0;
-	vertical-align: top;
+	vertical-align: middle;
 }
 .smf #bbcBox_message select
 {
@@ -4011,3 +4012,201 @@ body,
 .smf #smf_copyright {
 	float: right;
 }
+
+
+/* Responsive media query
+---------------------------------------------------- */
+@media (max-width: 750px) {
+	#__page {
+	  margin: 0;
+	}
+  
+	/*poster -----*/
+	.smf .post_wrapper {
+	  display: flex;
+	  flex-direction: column;
+	  position: relative;
+	}
+  
+	.poster, .smf .poster {
+	  width: 100%;
+	}
+  
+	.smf .poster ul.reset {
+	  gap: 0.5rem;
+	  display: flex;
+	  margin-right: 4rem;
+	}
+	.smf .poster ul.reset li {
+	  white-space: nowrap;
+	}
+	.smf .poster ul.reset li.gender {
+	  font-size: 0;
+	}
+  
+	.smf .poster li.stars,
+  .smf .poster li.postcount,
+  .smf .poster li.warning,
+  .smf .poster ul ul {
+	  display: none;
+	}
+  
+	.smf .poster li.avatar {
+	  position: absolute;
+	  right: 10px;
+	  top: 0;
+	}
+  
+	.smf .poster h4 {
+	  font-size: 1em;
+	  margin: 0 4rem 0 0;
+	  padding: 0;
+	  width: max-content;
+	}
+  
+	.postarea, .moderatorbar, .smf .postarea, .smf .moderatorbar {
+	  margin-right: 0 !important;
+	}
+  
+	.smf .postarea {
+	  position: static;
+	}
+  
+	.avatar {
+	  border-radius: 6px;
+	  height: 4em;
+	  object-fit: cover;
+	  width: 4em;
+	}
+  
+	.smf .keyinfo,
+  .smf .moderatorbar {
+	  display: none;
+	}
+  
+	.smf ul.quickbuttons {
+	  left: 0.5rem;
+	  margin: 0;
+	  position: absolute;
+	  top: -5px;
+	  font-size: 0;
+	}
+  
+	.smf ul.quickbuttons li a {
+	  display: inline-block;
+	}
+  
+	.smf .inner {
+	  border-top: 0;
+	  margin: 0;
+	  padding: 0 0.5rem;
+	}
+  
+	#forumposts .reportlinks,
+  .smf #forumposts .reportlinks {
+	  bottom: 0;
+	  left: 0;
+	  position: absolute;
+	}
+  
+	.smf div.cat_bar {
+	  height: unset;
+	  padding: 0;
+	}
+  
+	h3.catbg.centertext {
+	  height: unset;
+	  background: linear-gradient(to bottom, #787878, #989898);
+	  border-radius: 4px;
+	}
+  
+	/*Header -----*/
+	#__header-menu {
+	  display: flex;
+	  overflow: auto;
+	}
+  
+	#__header-menu > ul {
+	  display: flex;
+	  min-width: max-content;
+	}
+  
+	#__header-menu li {
+	  display: inline-block;
+	  float: none;
+	  width: max-content;
+	}
+  
+	#__header-menu #menu_nav li {
+	  display: block;
+	  width: 100%;
+	}
+  
+	#__header-menu .header-submenu {
+	  margin: 0;
+	  position: absolute;
+	  top: 73px;
+	  z-index: 21;
+	}
+  
+	a + .header-submenu {
+	  display: none;
+	}
+  
+	#__header-menu > ul a:hover + .header-submenu {
+	  display: block;
+	}
+  
+	#__header-logo {
+	  float: none;
+	}
+  
+	#__search-box input#search__input,
+  #__search-box input.edit {
+	  float: none;
+	  margin: 0;
+	  width: 83% !important;
+	}
+  
+	#__search-box {
+	  float: none;
+	  overflow: hidden;
+	}
+  
+	#__search-box input#search__submit,
+  #__search-box input.button,
+  .floatleft,
+  .smf #posting_icons,
+  .smf .floatleft {
+	  float: none;
+	}
+  
+	/**/
+	#basicinfo,
+  #detailedinfo,
+  .smf #basicinfo,
+  .smf #detailedinfo {
+	  float: none;
+	  width: 100%;
+	}
+  
+	#left_admsection,
+  .smf #left_admsection {
+	  float: none;
+	  padding: 0;
+	  width: 100%;
+	}
+  
+	#main_admsection,
+  .smf #main_admsection {
+	  margin: 0;
+	}
+  
+	#mlist {
+	  overflow: auto;
+	}
+	.smf table.table_list tbody.content td.icon{
+	  display: none;
+	}
+  }
+  
