@@ -4016,7 +4016,7 @@ body,
 
 /* Responsive media query
 ---------------------------------------------------- */
-@media (max-width: 750px) {
+@media (max-width: 900px) {
 	#__page {
 	  margin: 0;
 	}
@@ -4145,17 +4145,27 @@ body,
 	#__header-menu .header-submenu {
 	  margin: 0;
 	  position: absolute;
-	  top: 73px;
+	  top: 50px;
 	  z-index: 21;
+	  border: 1px solid #cccccc;
+	  border-radius: 4px;
 	}
   
 	a + .header-submenu {
 	  display: none;
 	}
+
+	#__header-menu .header-submenu a {
+		padding: 4px;
+	  }
   
-	#__header-menu > ul a:hover + .header-submenu {
+	#__header-menu > ul a:hover + .header-submenu,.header-submenu:hover {
 	  display: block;
 	}
+	#__header-menu #menu_nav li:hover > div {
+		right: 100%;
+		top: 0;
+	  }
   
 	#__header-logo {
 	  float: none;
@@ -4165,12 +4175,13 @@ body,
   #__search-box input.edit {
 	  float: none;
 	  margin: 0;
-	  width: 83% !important;
+	  width: calc(100% - 32px);
 	}
   
 	#__search-box {
 	  float: none;
 	  overflow: hidden;
+	  width: 100%;
 	}
   
 	#__search-box input#search__submit,

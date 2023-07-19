@@ -82,7 +82,7 @@ if (!isset($portal)) {
 	</div>
 	<div id="__search-box">
 			<form method="get" action="https://forum.ubuntu.ir/search.php" target="_blank">
-			<div>
+			<div class="search__wrapper">
 				<input type="text" name="q" id="search__input" placeholder="جستجو ..." size="20" maxlength="200" onfocus="insch(this)" onblur="outsch(this)" />
 				<input type="submit" name="sitesearch" id="search__submit" />
 			</div>
@@ -101,7 +101,7 @@ if (!isset($portal)) {
 			</div></form>
 
 			<form method="get" action="https://forum.ubuntu.ir/search.php" target="_blank"><div>
-				<input type="text" name="q" id="search__input" placeholder="جستجو ..." size="20" maxlength="200" onfocus="insch(this)" onblur="outsch(this)"�/>
+				<input type="text" name="q" id="search__input" placeholder="جستجو ..." size="20" maxlength="200" onfocus="insch(this)" onblur="outsch(this)"�/>
 				<input type="submit" id="search__submit" />
 			</div></form>
 		*/
