@@ -1216,3 +1216,9 @@ ul.moderation_notes li
 {
 	padding: 4px 4px 4px 0;
 }
+@media (max-width: 900px) {
+dl.register_form dt, dl.register_form dd {
+	float: none !important;
+	width: 100%;
+  }
+}
