@@ -4170,23 +4170,8 @@ body,
 	#__header-logo {
 	  float: none;
 	}
-  
-	#__search-box input#search__input,
-  #__search-box input.edit {
-	  float: none;
-	  margin: 0;
-	  width: calc(100% - 32px);
-	}
-  
-	#__search-box {
-	  float: none;
-	  overflow: hidden;
-	  width: 100%;
-	}
-  
-	#__search-box input#search__submit,
-  #__search-box input.button,
-  .floatleft,
+
+	.floatleft,
   .smf #posting_icons,
   .smf .floatleft {
 	  float: none;

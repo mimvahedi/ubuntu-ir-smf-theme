@@ -110,3 +110,26 @@ function togglebar() {
 // Add hover events to list items if the browser requires it.
 if (is_ie7down && 'attachEvent' in window)
 	window.attachEvent('onload', smf_addListItemHoverEvents);
+
+document.addEventListener("DOMContentLoaded",()=> {
+	document.querySelectorAll("#menu_nav a.firstlevel").forEach(a => {
+		a.addEventListener("click", e => {
+			if (!a.parentNode.querySelector("div")) return
+			e.preventDefault()
+			let isActive = a.parentNode.querySelector("div").classList.contains("active")
+			if (document.querySelector("#menu_nav div.active"))
+				document.querySelector("#menu_nav div.active").classList.remove("active")
+			if (!isActive) a.parentNode.querySelector("div").classList.toggle("active")
+		})
+	})
+	
+	document.querySelector("#js-search-toggle").addEventListener("click", e =>{
+		e.preventDefault()
+		document.body.classList.add("search-active")
+	})
+
+	document.querySelector(".__search-overlay").addEventListener("click", e =>{
+		e.preventDefault()
+		document.body.classList.remove("search-active")
+	})
+})
