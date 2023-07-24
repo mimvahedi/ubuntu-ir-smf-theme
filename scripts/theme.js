@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded",()=> {
 	document.querySelector("#js-search-toggle").addEventListener("click", e =>{
 		e.preventDefault()
 		document.body.classList.add("search-active")
+		document.querySelector("#search__input").focus()
 	})
 
 	document.querySelector(".__search-overlay").addEventListener("click", e =>{
