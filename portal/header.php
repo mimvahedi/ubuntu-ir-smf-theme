@@ -53,6 +53,8 @@ if (!isset($portal)) {
 			<li>
 				<a href="https://paste.ubuntu.ir/">سرویس Pastebin</a>
 			</li>
+		</ul>
+		<ul>
 			<li id="toggle-search">
 				<a id="js-search-toggle" href="https://forum.ubuntu.ir/search.php">
 				<span class="search__icon"></span>

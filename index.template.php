@@ -358,9 +358,6 @@ function template_body_below()
 			</div>
 			<!-- /Main -->
 			</div></div>
-		<!-- Footer -->
-		<?php include(PORTAL_DIR.'footer.php') ?>
-		<!-- /Footer -->
 	</div>
 	<div class="no"></div>
 	<!-- /Page --> <?php
@@ -376,6 +373,9 @@ function template_html_below()
 </div>
 <!-- /Document -->
 </div>
+<!-- Footer -->
+<?php include(PORTAL_DIR.'footer.php') ?>
+		<!-- /Footer -->
 </body>
 </html>	<?php
 }

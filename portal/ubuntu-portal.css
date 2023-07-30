@@ -45,7 +45,7 @@ img {
 	border: 0;
 }
 
-a, a:link, a:visited {
+a {
 	text-decoration: none;
 	color: #dd4814;
 }
@@ -174,6 +174,9 @@ div#__container > div:first-child > div.no {
 
 #__header-menu {
 	padding: 0px 16px;
+	display: flex;
+	justify-content: space-between;
+	flex: 1;
 }
 
 body.dark #__header-menu {
@@ -772,74 +775,173 @@ div.breadcrumbs a:hover {
 /**************/
 /*** FOOTER ***/
 
-#__site-footer {
-	position: relative;
-	padding: 16px 16px 16px 0;
-	font-size: 12px;
-	line-height: 18px;
-	height: 153px !important;	/* Чтобы прибивать футер */
-	-webkit-border-radius: 0px 0px 4px 4px;
-	-moz-border-radius: 0px 0px 4px 4px;
-	border-radius: 0px 0px 4px 4px;
-}
-
-#__site-footer > ul {
-	display: block;
-	float: right;
-	list-style-type: none;
-	width: 16.6666666%;
-	margin-bottom: 24px;
-}
-
-#__site-footer > ul li {
-	display: block;
-	margin-right: 16px;
-	border-bottom-color: #333333;
-	border-bottom-style: dotted;
-	border-bottom-width: 1px;
-}
-
-#__site-footer > ul li:first-child {
-	font-weight: bold;
-}
-
-#__site-footer > ul a {
-	color: #333;
-}
-
-#__site-footer > ul a:hover {
-	color: #dd4814;
-	text-decoration: underline;
-}
-
-#__site-footer > ul a:active,
-#__site-footer > ul a.active
-{
-	color: #dd4814;
-}
-
-#__site-footer > ul a.rss-feed {
-	padding-right: 18px;
-	background: url("../images/news_feed_bg.png") 100% 0 no-repeat;
-}
-
-#__site-footer > p {
-	clear: both;
-	float: right;
-	color: #aea79f;
-	padding-top: 3px;
-	line-height: 16px;
-	position: relative;
-	top: 3px;
-}
-
-#__site-footer > a {
-	display: block;
-	float: left;
-	position: relative;
-	padding-left: 16px;
-	height: 27px;
-}
+.u-footer {
+    position: relative;
+    padding: 2.5rem 0;
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+  .fd_dark .u-footer{
+    background-color: #171b24;
+  }
+  /*top border*/
+  .u-footer::before {
+    height: 0.1875rem;
+    width: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #e95420;
+    content: "";
+    position: absolute;
+  }
+  
+  .u-footer__row {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 68rem;
+    margin: auto;
+  }
+  
+  .u-footer--nav {
+    display: flex;
+    max-width: max-content;
+  }
+  
+  .u-footer--nav--part:not(:last-child) {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .u-footer--title {
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0 0 0.25rem;
+    margin: 0;
+  }
+  
+  .u-footer--title > a {
+    color: inherit;
+  }
+  
+  .u-footer-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .u-footer-list > li {
+    display: block;
+  }
+  
+  .u-footer-list > li > a {
+    display: block;
+    color: inherit;
+  }
+  
+  .u-footer--divider {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #d9d9d9;
+    border-collapse: separate;
+    height: 0;
+    margin-top: 2rem;
+	margin-bottom: calc(.5rem - 1px);
+  }
+  
+  @media screen and (min-width: 55rem) {
+    .u-footer__row {
+      display: flex;
+    }
+    .u-footer__row--content {
+      width: 60%;
+    }
+    .u-footer__row--social {
+      width: 40%;
+    }
+    .social-icons {
+      justify-content: flex-end;
+    }
+  }
+  
+  .u-inline-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .u-inline-list--item {
+    display: inline-block;
+  }
+  
+  .u-inline-list--link {
+    display: inline-block;
+    color: inherit;
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .u-footer--copyright-text {
+    margin: 1.5rem 0 0;
+  }
+  
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .social-icons--link {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    margin-left: 1rem;
+    background: #666;
+    border-radius: 50%;
+    text-align: center;
+  }
+  
+  .social--svg-icon {
+    width: 1em;
+    height: 1em;
+    fill: #fff;
+    vertical-align: middle;
+  }
+  .u-footer--go-top {
+    display: none;
+  }
+  
+  .u-footer--go-top--link {
+    color: #666;
+    padding: 0.5rem 1.5rem;
+    display: block;
+  }
+  .u-footer--go-top--icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+  }
+  @media screen and (max-width: 55rem) {
+    .u-footer {
+      padding-top: 0;
+    }
+    .u-footer--go-top {
+      display: block;
+      margin: 0 0 1rem;
+      border-bottom: 1px solid #666;
+    }
+    .u-inline-list--link,
+    .u-inline-list--item {
+      display: block;
+      padding: 0;
+      font-size: 0.875rem;
+    }
+    .social-icons {
+      margin-top: 1rem;
+    }
+  }
 
 /* ************ */
 /* Content menu */
